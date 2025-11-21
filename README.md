@@ -25,7 +25,10 @@ git checkout main
 
 # pull down the main branch in-case somebody else already update the main branch, so we have the lastest version of main branch
 git pull origin main
+```
 
+### merge new branch (template branch) to the main branch and delete the template branch
+```
 # check branches that already merged and not merged to current branch, which is "main"
 git branch --merged
 git branch --no-merged
