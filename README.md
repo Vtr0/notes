@@ -27,7 +27,7 @@ git checkout main
 git pull origin main
 ```
 
-### merge new branch (template branch) to the main branch and delete the template branch
+### Merge new branch (template branch) to the main branch and delete the template branch
 ```
 # check branches that already merged and not merged to current branch, which is "main"
 git branch --merged
@@ -47,4 +47,23 @@ git push origin --delete readme
 
 # see local and remote branch
 git branch -a
+```
+
+# Restore a file to a specific previous commit 
+
+
+```
+# First, find the commit hash:
+git log -- path/to/file
+
+# ✅ Then restore the file (but keep the change staged):
+git restore --source <commit-hash> path/to/file
+# This places the old version in your working directory.
+
+# ✅ Restore a file to a previous commit and stage the change
+git restore --source <commit-hash> --staged path/to/file
+
+#After reviewing the restored file, commit it:
+git add path/to/file
+git commit -m "Revert file to version from <commit-hash>"
 ```
