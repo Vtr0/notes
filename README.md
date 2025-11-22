@@ -44,7 +44,10 @@ git branch readme
 git checkout readme
 
 # these above two commands can be combined into one
-git checkout -b
+git checkout -b <new_branch>
+# or more recently
+git switch -c <new-branch-name>
+
 # see local and remote branch
 git branch -a
 ```
