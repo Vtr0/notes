@@ -1,6 +1,9 @@
 # GT
 ## Git setup
-
+```
+# run following command or put it in the batch file in the working durectory to start bash-git from that directory (save some cd command)
+"C:\Program Files\Git\git-bash.exe" --cd=.\"
+```
 ## Working with GIT
 ```
 # setup name and email
