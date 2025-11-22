@@ -1,6 +1,21 @@
 # GT
-## Git Test for learning Git command and how to use it
-## add one more line for testing readme branch using the pair
+## Git setup
+
+## Working with GIT
+```
+# setup name and email
+git config --global user.name "vtr0"
+git config --global user.email "icwt@rocketmail.com"
+
+# set-up new line char (cr+lf in windows and lf in MacOs). In MacOS should set following value of autocrlf to input
+git config --global core.autocrlf true
+
+# default editor is vsc and git wait for vsc tab to close before continue
+git config --global core.editor "code --wait"
+
+# Edit config on editor
+git config --global -e
+```
 
 ### Clone remote repository into local repository
 ```
@@ -27,6 +42,9 @@ git push -u origin master #or main
 git branch readme
 # switch to branch "readme"
 git checkout readme
+
+# these above two commands can be combined into one
+git checkout -b
 # see local and remote branch
 git branch -a
 ```
