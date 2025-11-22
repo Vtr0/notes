@@ -26,6 +26,14 @@ git config --global -e
 ```
 # check status, see if any tracked file modified, on staging area
 git status [file_name] [--graph]
+
+# see the log
+git log [file_name] [--all] [--graph]
+
+# see remote repository
+git remote [-v]
+# see remote branch
+git branch [-r|-a]
 ```
 
 ### Clone remote repository into local repository
