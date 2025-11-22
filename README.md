@@ -10,7 +10,7 @@
 git config --global user.name "vtr0"
 git config --global user.email "icwt@rocketmail.com"
 
-# set-up new line char (cr+lf in windows and lf in MacOs). In MacOS should set following value of autocrlf to input
+# set-up new line char (cr+lf in windows and lf in MacOs). In MacOS should set following value of autocrlf to "input" (instead of true)
 git config --global core.autocrlf true
 
 # default editor is vsc and git wait for vsc tab to close before continue
