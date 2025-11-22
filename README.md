@@ -2,6 +2,25 @@
 ## Git Test for learning Git command and how to use it
 ## add one more line for testing readme branch using the pair
 
+### Clone remote repository into local repository
+```
+# create a local repo
+git clone "https://github.com/Vtr0/gt/"
+```
+
+### Create new repository with command line
+```
+# create a local repo
+git init
+# switch to branch "readme"
+git add README.md
+git commit -m "Initial commit"
+# connect with remote repository
+git remote add origin "https://github.com/Vtr0/gt"
+# push from local repo to remote repo
+git push -u origin master #or main
+```
+
 ### Switch to another branch
 ```
 # create a local branch named "readme"
