@@ -30,6 +30,9 @@ git config --global -e
 # check status, see if any tracked file modified, on staging area
 git status [file_name] [--graph]
 
+# Shows the specific changes you've staged in the files.
+git diff --staged
+
 # see the log
 git log [file_name] [--all] [--graph]
 
