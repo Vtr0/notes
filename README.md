@@ -1,4 +1,7 @@
 # GT
+
+## Youtube resource
+[ByteByteGo - Git scheme](https://www.youtube.com/watch?v=e9lnsKot_SQ)
 ## Git setup
 ```
 # run following command or put it in the batch file in the working durectory to start bash-git from that directory (save some cd command). Note that there is no " at the end
@@ -111,7 +114,7 @@ git push origin --delete readme
 git branch -a
 ```
 
-# Restore a file to a specific previous commit 
+## Restore a file to a specific previous commit 
 
 
 ```
@@ -133,3 +136,5 @@ git commit -m "Revert file to version from <commit-hash>"
 # Short-way for above 3 commands:
 git commit -am "Your commit message" && git push
 ```
+# Markdown language
+[GIT scheme](https://commonmark.org/help/)
