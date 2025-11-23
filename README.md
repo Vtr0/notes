@@ -143,8 +143,8 @@ git commit -am "Your commit message" && git push
 # GIT scheme
 [ByteByteGo - Git scheme](https://www.youtube.com/watch?v=e9lnsKot_SQ)
 
-[Git scheme and corresponding basic commands](./images/git_merge_rebase_squash.jpg)
-[Git pull scheme](./images/git_pull.jpg)
-[Git Merge vs Rebase vs Squash](./images/git_merge_rebase_squash.jpg)
+![Git scheme and corresponding basic commands](./images/git_merge_rebase_squash.jpg)
+![Git pull scheme](./images/git_pull.jpg)
+![Git Merge vs Rebase vs Squash](./images/git_merge_rebase_squash.jpg)
 # Markdown language
 [GIT scheme](https://commonmark.org/help/)
