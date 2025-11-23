@@ -176,8 +176,8 @@ git restore --source=<branch_name> <file_name>
 > [SuperSimpleDev - Git cheatsheet - PDF](https://supersimpledev.github.io/references/git-github-reference.pdf)  
 
 ### FreeCodeCamp
-> [FreeCodeCamp - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)  > 
-[FreeCodeCamp - Learn Git – Full Course for Beginners](https://www.youtube.com/watch?v=zTjRZNkhiEU)  
+> [FreeCodeCamp - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)  
+> [FreeCodeCamp - Learn Git – Full Course for Beginners](https://www.youtube.com/watch?v=zTjRZNkhiEU)  
 
 [JavaScript Mastery - Visualized Git Course](https://www.youtube.com/watch?v=S7XpTAnSDL4)
 # GIT scheme
