@@ -31,6 +31,10 @@ git config --global -e
 # check status, see if any tracked file modified, on staging area
 git status [file_name] [--graph]
 
+# Shows a compact, two-column summary of changes in your repo.
+- git status -s 
+- git status --short
+
 # Shows the specific changes you've staged in the files.
 git diff --staged
 
@@ -141,6 +145,7 @@ git commit -m "Revert file to version from <commit-hash>"
 git commit -am "Your commit message" && git push
 ```
 ## Git resource
+[Mosh - Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)  
 [Tôi Đi Code Dạo](https://www.youtube.com/watch?v=1JuYQgpbrW0) - [Slide](https://docs.google.com/presentation/d/12i4myOgbukiXtX185Kir1qE2SXIpcrd6uik4wJL_KjU/edit?slide=id.p4#slide=id.p4)
 
 ### SuperSimpleDev
