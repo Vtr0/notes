@@ -1,7 +1,6 @@
 # GT
 
-## Youtube resource
-[ByteByteGo - Git scheme](https://www.youtube.com/watch?v=e9lnsKot_SQ)
+
 ## Git setup
 ```
 # run following command or put it in the batch file in the working durectory to start bash-git from that directory (save some cd command). Note that there is no " at the end
@@ -166,7 +165,7 @@ git restore --source=<branch_name> <file_name>
 
 # similar to old git-checkout, git-reset
 ```
-## Git resource
+## Git Youtube resource
 [Mosh - Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)  
 [Tôi Đi Code Dạo](https://www.youtube.com/watch?v=1JuYQgpbrW0) - [Slide](https://docs.google.com/presentation/d/12i4myOgbukiXtX185Kir1qE2SXIpcrd6uik4wJL_KjU/edit?slide=id.p4#slide=id.p4)
 
@@ -176,8 +175,8 @@ git restore --source=<branch_name> <file_name>
 > [SuperSimpleDev - Branchng and Merging](https://www.youtube.com/watch?v=Q1kHG842HoI)  
 > [SuperSimpleDev - Git cheatsheet - PDF](https://supersimpledev.github.io/references/git-github-reference.pdf)  
 
-[FreeCodeCamp - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)  
-
+### FreeCodeCamp
+> [FreeCodeCamp - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)  > 
 [FreeCodeCamp - Learn Git – Full Course for Beginners](https://www.youtube.com/watch?v=zTjRZNkhiEU)  
 
 [JavaScript Mastery - Visualized Git Course](https://www.youtube.com/watch?v=S7XpTAnSDL4)
