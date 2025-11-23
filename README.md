@@ -8,6 +8,7 @@
 "C:\Program Files\Git\git-bash.exe" --cd=.\
 ```
 
+[Mosh - Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE)
 ```
 # setup name and email
 git config --global user.name "vtr0"
@@ -139,7 +140,15 @@ git commit -m "Revert file to version from <commit-hash>"
 # Short-way for above 3 commands:
 git commit -am "Your commit message" && git push
 ```
+## Git resource
+[Tôi Đi Code Dạo](https://www.youtube.com/watch?v=1JuYQgpbrW0) - [Slide](https://docs.google.com/presentation/d/12i4myOgbukiXtX185Kir1qE2SXIpcrd6uik4wJL_KjU/edit?slide=id.p4#slide=id.p4)
 
+[SuperSimpleDev - Git and GitHub - Part 1](https://www.youtube.com/watch?v=hrTQipWp6co)
+[SuperSimpleDev - Git and GitHub - Part 2](https://www.youtube.com/watch?v=1ibmWyt8hfw) - Deeper on git. Also there is instruction about  Personal Access Token, SSH-key
+[SuperSimpleDev - Branchng and Merging](https://www.youtube.com/watch?v=Q1kHG842HoI)
+[SuperSimpleDev - Git cheatsheet - PDF](https://supersimpledev.github.io/references/git-github-reference.pdf)
+
+[FreeCodeCamp - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)
 # GIT scheme
 [ByteByteGo - Git scheme](https://www.youtube.com/watch?v=e9lnsKot_SQ)
 
