@@ -134,7 +134,7 @@ git restore --source <commit-hash> path/to/file
 # This places the old version in your working directory.
 
 # ✅ Restore a file to a previous commit and stage the change
-git restore --source <commit-hash> --staged path/to/file
+git restore --source=<commit-hash> --staged path/to/file
 
 # After reviewing the restored file, commit it to the remote repository:
 git add path/to/file
@@ -143,6 +143,28 @@ git commit -m "Revert file to version from <commit-hash>"
 
 # Short-way for above 3 commands:
 git commit -am "Your commit message" && git push
+```
+
+```
+# If you’ve made changes to a file and want to discard those changes, you can restore the file back to its last committed state
+git restore <file_name>
+
+# restore a file to the version in a specific commit
+git restore --source=<commit_hash> <file_name>
+
+# unstage the file, but the changes to the file will still remain in your working directory
+git restore --staged example.txt
+
+# command effectively discards all changes and restores the working directory and staging area to the state of the latest commit
+git restore --source=HEAD --staged --worktree .
+
+# interactively choose chunks of the file to restore (similar to git checkout -p or git reset -p)
+git restore --source=HEAD --patch <file_name>
+
+# restore a file from a different branch (not the current one)
+git restore --source=<branch_name> <file_name>
+
+# similar to old git-checkout, git-reset
 ```
 ## Git resource
 [Mosh - Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)  
