@@ -8,7 +8,7 @@ rem run following command or put it in the batch file in the working durectory t
 ```
 
 [Mosh - Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE)
-```bash
+```git-bash
 # setup name and email
 git config --global user.name "vtr0"
 git config --global user.email "icwt@rocketmail.com"
@@ -26,7 +26,7 @@ git config --global -e
 ## Working with GIT
 
 ### Check git status
-```bash
+```git
 # check status, see if any tracked file modified, on staging area
 git status [file_name] [--graph]
 
