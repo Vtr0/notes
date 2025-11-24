@@ -1,8 +1,10 @@
 # Get media url from https://radiotruyen.me
 
 ## Page to help create bookmarklet
-Paste above code into following page to create bookmarklet for copying url of 
-Open [https://caiorss.github.io/bookmarklet-maker/](https://caiorss.github.io/bookmarklet-maker/)
+Open [https://caiorss.github.io/bookmarklet-maker/](https://caiorss.github.io/bookmarklet-maker/) for pasting the pure js code to make bookmarklet.  
+If the code is too long, you can use [https://www.uglifyjs.net/](https://www.uglifyjs.net/) to minify the code before pasting to make bookmarklet.
+
+Note that, after pasting the code (below), there is an `bookmarklet` link created by the page that you can drag it directly to _browser bookmark bar_ to create the bookmarklet
 
 ## Code to get whole or part of playlist start from current item (so should start from item 1)
 ```javascript
@@ -69,6 +71,7 @@ javascript:(function()%7Bconst%20statBar%20%3D%20document.querySelector('h4')%3B
 
 ##Using one of following js code to get one by one chapter
 ```javascript
+/* JAVASCRIPT */
 navigator.clipboard.writeText(JSON.stringify($("#jquery_jplayer_1").data("jPlayer").status.media)+",\n")
 
 $(".jp-next").click();navigator.clipboard.writeText(JSON.stringify($("#jquery_jplayer_1").data("jPlayer").status.media)+",\n")
