@@ -13,8 +13,7 @@ curl -L -H "User-Agent: Mozilla/5.0" -H "Referer: https://radiotruyen.me" -o "12
 ```
 
 ## Batch download and rename
-----------
-batch file to using curl to download even if radiotruyen.me prevents cross-origin and we cannot download file directly from browser
+Batch file to using curl to download even if radiotruyen.me prevents cross-origin and we cannot download file directly from browser
 
 ### input.txt file format
 files.txt should look as follows
@@ -125,7 +124,7 @@ echo Results saved to "%OUTPUT_FILE%"
 pause
 ```
 ### Output file
-`output.txt`
+The output file `output.txt` will looks as following. Adding `[]` we will have a json file
 ```json
 {"tit": "100.mp3", "dur": "1:02:14"},
 {"tit": "119.mp3", "dur": "58:05"},
