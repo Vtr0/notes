@@ -22,7 +22,8 @@ files.txt should look as follows
 120.mp3 https://files.radiotruyen.me/4817--vdck/qZ%2B74vpV54Ih8ujG4l5MOg==.mp3
 ```
 ### Batch file to run cUrl
-Create batch file as follows:
+Create batch file as follows:  
+`download_mp3.bat`
 ```batch
 REM download_mp3.bat
 @echo off
@@ -65,6 +66,7 @@ winget install curl ffmpeg
 ```
 
 ### Batch file to get duration
+`grab_dur.bat`
 ```batch
 @echo off
 setlocal enabledelayedexpansion
