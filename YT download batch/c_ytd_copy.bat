@@ -6,8 +6,8 @@ REM === YT-MP3 Downloader Script ===
 REM Downloads MP3s from YouTube with full ID3 metadata
 
 REM Set the download directory
-rem set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube MP3"
-set "DOWNLOAD_DIR=.\YouTube-MP3"
+set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube MP3"
+rem set "DOWNLOAD_DIR=.\YouTube MP3"
 
 REM Create download folder if it doesn't exist
 if not exist "%DOWNLOAD_DIR%" (
@@ -83,21 +83,47 @@ if "%sg_index_choice%"=="1" (
         -o "%DOWNLOAD_DIR%\%%(title)s.%%(ext)s" %VIDEO_URL%
 ) else (
     rem ----------------------------
+    rem Ask for Padding size (number of digits for padding (3 -> 001, 002, ...))
+    rem ----------------------------
+    set "SG_PS_DV=2"
+    set /p SG_PS_UV="Enter Padding size (number), default 2 (1 --> 01): "
+
+    :: variable name shortcut: SG=Single, PS = Padding Size, UV=User Value, DV=Default Value
+    :: Use default if user pressed Enter
+    if "!SG_PS_UV!"=="" set "SG_PS_UV=!SG_PS_DV!"
+
+    :: Try arithmetic to see if it's numeric
+    set /a sg_ps_test=!SG_PS_UV! >nul 2>nul
+    if errorlevel 1 (
+        echo Invalid input. Using default value: !SG_PS_DV!
+        set "SG_PAD_SIZE=!SG_PS_DV!"
+    ) else (
+        set "SG_PAD_SIZE=!SG_PS_UV!"
+    )
+    echo SG_PAD_SIZE chosen = !SG_PAD_SIZE!
+
+    rem ----------------------------
     rem Ask for start index
     rem ----------------------------
-    CALL :GetUserInputNumber "Enter start index (number), default 1: " 1
-    SET SG_START_INDEX=!ERRORLEVEL!
+    set "SG_SI_DV=1"
+    set /p SG_SI_UV="Enter start index (number), default 1: "
+
+    :: variable name shortcut: SG=Single, SI=Start Index, UV=User Value, DV=Default Value
+    :: Use default if user pressed Enter
+    if "!SG_SI_UV!"=="" set "SG_SI_UV=!SG_SI_DV!"
+
+    :: Try arithmetic to see if it's numeric
+    set /a sg_si_test=!SG_SI_UV! >nul 2>nul
+    if errorlevel 1 (
+        echo Invalid input. Using default value: !SG_SI_DV!
+        set "SG_START_INDEX=!SG_SI_DV!"
+    ) else (
+        set "SG_START_INDEX=!SG_SI_UV!"
+    )
+
     echo SG_START_INDEX chosen = !SG_START_INDEX!
     :: Adjust for autonumber starting at 1
     set /a SG_START_INDEX=SG_START_INDEX-1
-
-    
-    rem ----------------------------
-    rem Ask for Padding size (number of digits for padding (3 --we have 001, 002, ...))
-    rem ----------------------------
-    CALL :GetUserInputNumber "Enter Padding size (number), default 2 (1 becomes 01): " 2
-    SET SG_PAD_SIZE=!ERRORLEVEL!
-    echo SG_PAD_SIZE chosen = !SG_PAD_SIZE!
 
     rem ----------------------------
     rem Start batch download with indexing
@@ -139,22 +165,46 @@ if "%index_choice%"=="1" (
         -o "%DOWNLOAD_DIR%\%%(title)s.%%(ext)s" -a "%URL_LINKS_FILE%"
 ) else (
     rem ----------------------------
+    rem Ask for Padding size (number of digits for padding (3 -> 001, 002, ...))
+    rem ----------------------------
+    set "PS_DEFAULT_VALUE=2"
+    set /p PS_USER_VALUE="Enter Padding size (number), default 2 (1 --> 01): "
+
+    :: Use default if user pressed Enter
+    if "!PS_USER_VALUE!"=="" set "PS_USER_VALUE=!PS_DEFAULT_VALUE!"
+
+    :: Try arithmetic to see if it's numeric
+    set /a ps_test=!PS_USER_VALUE! >nul 2>nul
+    if errorlevel 1 (
+        echo Invalid input. Using default value: !PS_DEFAULT_VALUE!
+        set "PAD_SIZE=!PS_DEFAULT_VALUE!"
+    ) else (
+        set "PAD_SIZE=!PS_USER_VALUE!"
+    )
+    echo PAD_SIZE chosen = !PAD_SIZE!
+    
+
+    rem ----------------------------
     rem Ask for start index
     rem ----------------------------
-    CALL :GetUserInputNumber "Enter start index (number), default 1: " 1
-    SET START_INDEX=!ERRORLEVEL!
+    set "DEFAULT_VALUE=1"
+    set /p USER_VALUE="Enter start index (number), default 1: "
+
+    :: Use default if user pressed Enter
+    if "!USER_VALUE!"=="" set "USER_VALUE=!DEFAULT_VALUE!"
+
+    :: Try arithmetic to see if it's numeric
+    set /a test=!USER_VALUE! >nul 2>nul
+    if errorlevel 1 (
+        echo Invalid input. Using default value: !DEFAULT_VALUE!
+        set "START_INDEX=!DEFAULT_VALUE!"
+    ) else (
+        set "START_INDEX=!USER_VALUE!"
+    )
+
     echo START_INDEX chosen = !START_INDEX!
     :: Adjust for autonumber starting at 1
     set /a START_INDEX=START_INDEX-1
-
-    
-    rem ----------------------------
-    rem Ask for Padding size (number of digits for padding (3 --we have 001, 002, ...))
-    rem ----------------------------
-    CALL :GetUserInputNumber "Enter Padding size (number), default 2 (1 becomes 01): " 2
-    SET PAD_SIZE=!ERRORLEVEL!
-    echo PAD_SIZE chosen = !PAD_SIZE!
-    
 
     rem ----------------------------
     rem Start batch download with indexing
@@ -177,37 +227,46 @@ set /p PLAYLIST_URL="Enter YouTube playlist URL: "
 :: -----------------------
 :: Ask for Start Index
 :: -----------------------
-CALL :GetUserInputNumber "Enter start index (number), default 1: " 1
-SET PL_START_INDEX=!ERRORLEVEL!
+set "PL_DEFAULT_START=1"
+set /p PL_USER_START="Enter start index (default %PL_DEFAULT_START%):" 
+
+:: Validate numeric
+set /a pl_start_test=!PL_DEFAULT_START! >nul 2>nul
+if errorlevel 1 (
+    echo Invalid input. Using default start index: !PL_DEFAULT_START!
+    set "PL_START_INDEX=!PL_DEFAULT_START!"
+) else (
+    set "PL_START_INDEX=!PL_USER_START!"
+)
 echo Start index chosen = !PL_START_INDEX!
 
 :: -----------------------
 :: Ask for End Index
 :: -----------------------
-CALL :GetUserInputNumber "Enter end index (Enter or 0 for default: last item):" 0
-SET PL_END_INDEX=!ERRORLEVEL!
+set /p PL_USER_END="Enter end index (default: last item):" 
+
+:: Validate numeric
+set /a pl_end_test=!PL_USER_END! >nul 2>nul
+if errorlevel 1 (
+    echo No valid end index provided. Using last item in playlist.
+    set "PL_END_INDEX="
+) else (
+    set "PL_END_INDEX=!PL_USER_END!"
+)
 echo End index chosen = !PL_END_INDEX!
 
 :: -----------------------
 :: Build yt-dlp options for start/end index
 :: -----------------------
 set "PL_RANGE_OPT="
-:: if start index == 1, no need to set --playlist-start
-if !PL_START_INDEX! GTR 1 (
+if defined PL_START_INDEX (
     set "PL_RANGE_OPT=--playlist-start !PL_START_INDEX!"
 )
-:: if end index == 0, meaning to the end of playlist, so no need to set --playlist-end
-if !PL_END_INDEX! GTR 0 (
+if defined PL_END_INDEX (
     set "PL_RANGE_OPT=!PL_RANGE_OPT! --playlist-end !PL_END_INDEX!"
 )
-::echo Playlist range options: !PL_RANGE_OPT!
-
-rem ----------------------------
-rem Ask for Padding size (number of digits for padding (3 --we have 001, 002, ...))
-rem ----------------------------
-CALL :GetUserInputNumber "Enter Padding size (number), default 2 (1 becomes 01): " 2
-SET PL_PADDING_DIGITS=!ERRORLEVEL!
-echo Padding size chosen = !PL_PADDING_DIGITS!
+:: Padding size fixed at 2 for now (may add code for user input later)
+set PL_PADDING_DIGITS=2
 
 :: -----------------------
 :: Download playlist
@@ -220,41 +279,3 @@ echo.
 echo ✅ Playlist download complete.
 pause
 goto :main_menu
-
-
-REM -----------------------------------------------------
-REM Subroutine: GetUserInputNumber
-REM Prompts the user for a number with a default value.
-REM Parameters:
-REM   %1 - Prompt message
-REM   %2 - Default value
-REM -----------------------------------------------------
-:GetUserInputNumber
-SETLOCAL
-SET PROMPT=%1
-SET DEFAULT=%2
-
-REM Prompt the user for input
-SET /P "USER_INPUT=%PROMPT% [default: %DEFAULT%]: "
-
-REM If the user pressed Enter without typing anything, use the default value
-IF "%USER_INPUT%"=="" (
-    :: SET USER_INPUT=%DEFAULT%
-    exit /b %DEFAULT%
-)
-
-REM Check if the input is a valid number
-:: echo %USER_INPUT% | findstr /R "^[0-9][0-9]*$" >nul
-:: Try arithmetic to see if it's numeric
-set /a suin_test=0%USER_INPUT% >nul 2>nul
-:: echo USER_INPUT_TEST=%suin_test%
-:: echo ERRORLEVEL=%errorlevel%
-IF errorlevel 1 (
-    REM Invalid input, return an error code (-1) using exit /b
-    :: echo DEFAULT=%DEFAULT%
-    exit /b %DEFAULT%
-)
-
-REM If the input is valid, return the number using exit /b
-:: echo USER_INPUT=%USER_INPUT%
-exit /b %USER_INPUT%
