@@ -126,9 +126,22 @@ Go to [Output template](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#outp
 --------------------------
 
 ### Mapping of bitrate
-Here's the typical mapping for MP3 VBR quality settings (--audio-quality 0 to 9):
+Here's the typical mapping for MP3 VBR quality settings (`--audio-quality` 0 to 9):
 
---audio-quality	Approximate Bitrate	Description
+`--audio-quality`: Approximate Bitrate	Description
+| Value | Bitrate     | Quality           |
+|-------|------------|--------------------|
+| 0     | ~245 kbps  | Highest quality    |
+| 1     | ~225 kbps  | Very high quality  |
+| 2     | ~190 kbps  | High quality       |
+| 3     | ~175 kbps  | Good quality       |
+| 4     | ~165 kbps  | Near transparency  |
+| 5     | ~130 kbps  | Medium quality     |
+| 6     | ~115 kbps  | Lower quality      |
+| 7     | ~100 kbps  | Low quality        |
+| 8     | ~85 kbps   | Very low quality   |
+| 9     | ~65 kbps   | Lowest quality     |
+<!-- 
 * 0	~245 kbps	Highest quality
 * 1	~225 kbps	Very high quality
 * 2	~190 kbps	High quality
@@ -138,4 +151,4 @@ Here's the typical mapping for MP3 VBR quality settings (--audio-quality 0 to 9)
 * 6	~115 kbps	Lower quality
 * 7	~100 kbps	Low quality
 * 8	~85 kbps	Very low quality
-* 9	~65 kbps	Lowest quality
+* 9	~65 kbps	Lowest quality -->
