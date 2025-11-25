@@ -151,11 +151,14 @@ fdmLink = (link,f,t, pad = 0) => {
 ```
 -------------------------------
 #### remove STT:
-x = data_2.ach_Data; x.books.forEach(b => b.parts.forEach(p => {if(p.hasOwnProperty("stt")) delete p.stt})); copy(x)
-	
-add STT back:
-.parts[i] = Object.assign({stt: i+1}, .parts[i])
---------
+```javascript
+x = data_2.ach_Data; x.books.forEach(b => b.parts.forEach(p => {if(p.hasOwnProperty("stt")) delete p.stt})); copy(x) 
+```
+
+add STT back:  `.parts[i] = Object.assign({stt: i+1}, .parts[i]) `
+
+--------  
+
 ### Nhat-truyen
 get nhat truyen (https://nhattruyen.one/) media playlist
 - Chọn một li trong playlist, chuột phải --> 'break on' --> 'attribute modifications'.
