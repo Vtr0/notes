@@ -1,13 +1,13 @@
 # Install dependencies
 ### ✅ Prerequisites
 
-Ensure yt-dlp is installed and updated, and ffmpeg is available in your system's PATH.
+Ensure `yt-dlp` is installed and updated, and ffmpeg is available in your system's `PATH`.
 
 ### Install by winget
 bash/cmd:	`winget install yt-dlp`  
-Upgrade yt-dlp: `winget install upgrade yt-dlp` or `yt-dlp -U`
+Upgrade `yt-dlp`: `winget install upgrade yt-dlp` or `yt-dlp -U`
 
-Install ffmpeg (not necessary): `winget install ffmpeg`
+Install `ffmpeg` (not necessary): `winget install ffmpeg`
 
 ### Links
 YT-DLP on github: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file
@@ -82,7 +82,7 @@ With mode [2], you have to type in the `start index` and `padding size`, for exa
 ```
 
 ### 🔁 Batch Download Using a `urls.txt` File
-Example of a `urls.txt	 file:
+Example of a `urls.txt`	 file:
 ```makefile
 https://www.youtube.com/watch?v=VIDEO_ID1
 https://www.youtube.com/watch?v=VIDEO_ID2
