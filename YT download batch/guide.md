@@ -43,6 +43,7 @@ Choose the desired filename format (default is option 1):
 #### Bitrate menu
 First, you should choose the bitrate from 64kbps, 128kbps, 192kbps (default), 256kbps, 320kbps
 
+### Choose download mode.
 Ater choosing some general setting, we will have a menu as follows
 ```makefile
 ---------------------------------------
@@ -63,7 +64,6 @@ Select download mode:
 Choose an option (1-4): 
 ```
 
-### Choose mode to download
 ### 🔽 Single file mode
 Even the name, you can pase multiple urls for downloading. After type in url(s), you have to choose the filename mode  
 [1] ➤ Without Index in Filename: without the ordinal  
