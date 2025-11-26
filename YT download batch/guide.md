@@ -22,9 +22,7 @@ If somehow `yt-dlp` fails to download mp3, you should upgrade it.
 * The batch file should be used: **`ytd.bat`**
 * All downloaded MP3 from YouTube Video will be embbed withFull `ID3 Tags`
 
-## Guide
-
-### Choose general settings
+## Choose general settings
 ### id3 tag
 Choose to add id3 tag to output mp3 files or not
 ### Output filename format
@@ -40,7 +38,7 @@ Choose the desired filename format (default is option 1):
 ---------------------------------------
 ```
 
-#### Bitrate menu
+### Bitrate menu
 First, you should choose the bitrate from 64kbps, 128kbps, 192kbps (default), 256kbps, 320kbps
 
 ### Choose download mode.
