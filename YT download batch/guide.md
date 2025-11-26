@@ -72,7 +72,7 @@ set PL_PADDING_DIGITS=2
 	set "DOWNLOAD_DIR=%userprofile%\Downloads"
 Or simply  
 
-	set "DOWNLOAD_DIR=.\YouTube MP3"
+	set "DOWNLOAD_DIR=.\YouTube-MP3"
 
 ### Command explain
 Following to Download One (or few youtube video whose url separate by a space) YouTube Video as MP3 with Full ID3 Tags
