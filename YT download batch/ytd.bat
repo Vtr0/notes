@@ -6,8 +6,8 @@ REM === YT-MP3 Downloader Script ===
 REM Downloads MP3s from YouTube with full ID3 metadata
 
 REM Set the download directory
-set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube MP3"
-rem set "DOWNLOAD_DIR=.\YouTube-MP3"
+rem set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube MP3"
+set "DOWNLOAD_DIR=.\YouTube-MP3"
 
 REM Create download folder if it doesn't exist
 if not exist "%DOWNLOAD_DIR%" (
@@ -89,9 +89,9 @@ echo ---------------------------------------
 echo Settings:
 echo   Download Directory: "%DOWNLOAD_DIR%"
 if defined EMBBED_ID3_CMD (
-    echo   Embed ID3 Metadata: "Yes"
+    echo   Embbed ID3 Metadata: "Yes"
 ) else (
-    echo   Embed ID3 Metadata: "No"
+    echo   Embbed ID3 Metadata: "No"
 )
 echo   Filename Format: "%FNAME_FORMAT%"
 echo   Audio Bitrate: "%BITRATE%bps"
@@ -180,7 +180,7 @@ echo [1] Use default filenames - default
 echo [2] Use indexed filenames (01 - Title.mp3)
 set /p index_choice="Choose filename style (1-2): "
 
-:: default there is no ordinal
+:: default there is no ordinal. "BA" means "Batch"
 set "BA_ORDINAL="
 if "%index_choice%"=="2" (
     rem ----------------------------
