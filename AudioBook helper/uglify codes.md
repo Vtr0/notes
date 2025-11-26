@@ -21,29 +21,32 @@
 
 # Notepad++	
 
-Using **`notepad++`** to clean **`data_*.js`** files
-## Using replace diaglog 
-remove HTML comment, style, script marker: in Notepad++ replace diaglog, choose "Regular expression mode", then replace following with empty ""
+Using **`notepad++`** to clean **`data_*.js`** files and minify `html` code before minifying and obfuscation.
+## Using `Replace` diaglog 
+
+### Remove extra `script`, `style`, `comment` tag before objuscating
+To remove HTML comment, style, script marker: in Notepad++ replace diaglog, choose "Regular expression mode", then replace following with empty ""
 ```
 	\"use strict\"\;|<!--(.+)-->|</?script>|</?style>
 ```
--------------------
 
-replace following (in Regular expression mode) with `$1`:
+### Remove extra `"` out of properties name for most mini `data_*` database
+
+Replace following (in Regular expression mode) with `$1`:
+```text
+"(bookId|meta|name|eName|bookGrp|gId|books|title|eTitle|author|type|mc|cover|ssrc|grp|wc|url|urlLine|nd|startNum|wcSrc|tap|skipStart|label|f|t|autoTap|year|intro|parts|stt|tit|eTit|dur|img|oUrl|cId|infor)":
 ```
-\"(bookId|meta|name|eName|bookGrp|gId|books|title|eTitle|author|type|mc|cover|ssrc|grp|wc|url|urlLine|nd|startNum|wcSrc|tap|skipStart|label|f|t|autoTap|year|intro|parts|stt|tit|eTit|dur|img|oUrl|cId|infor)\":
-```
 
 
-OR more extensively (but may cause flaws)  
-replace following (in Regular expression mode) with `$1`:
+OR more extensively (but may cause flaws), replace following (in Regular expression mode) with `$1`:
 ```
 "([^\"]+)":
 ```
-## Change shortcuts.xml
-Macro saved at file `shortcuts.xml` in folder `%AppData%\Notepad++`. So you can add following code the the `shortcuts.xml` file
+## Edit file `shortcuts.xml`
+Macros of `Notepad++` saved at file `shortcuts.xml` in folder `%AppData%\Notepad++`.  
+You can add following code the the `shortcuts.xml` file, to have `REMOVE style script TAG` and `Trim name of Database` available in `Notepad++`'s `Macros` menu
 ```xml
-<Macros>
+    <Macros>
         <Macro name="REMOVE style script TAG" Ctrl="no" Alt="no" Shift="no" Key="0">
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
             <Action type="3" message="1601" wParam="0" lParam="0" sParam='\&quot;use strict\&quot;\;|&lt;!--(.+)--&gt;|&lt;/?script&gt;|&lt;/?style&gt;' />
