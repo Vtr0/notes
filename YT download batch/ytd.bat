@@ -119,15 +119,13 @@ set /p VIDEO_URL="Enter YouTube video URL (or type 'e' to go back): "
 
 if /i "%VIDEO_URL%"=="e" goto :main_menu
 
-echo [1] Use default filenames
+echo [1] Use default filenames (Title.mp3) - default
 echo [2] Use indexed filenames (01 - Title.mp3)
 set /p sg_index_choice="Choose filename style (1-2): "
 
-if "%sg_index_choice%"=="1" (
-    yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
-        !EMBBED_ID3_CMD! ^
-        -o "%DOWNLOAD_DIR%\!FNAME_FORMAT!" %VIDEO_URL%
-) else (
+:: default there is no ordinal
+set "SG_ORDINAL="
+if "%sg_index_choice%"=="2" (
     rem ----------------------------
     rem Ask for start index
     rem ----------------------------
@@ -145,13 +143,16 @@ if "%sg_index_choice%"=="1" (
     SET SG_PAD_SIZE=!ERRORLEVEL!
     echo SG_PAD_SIZE chosen = !SG_PAD_SIZE!
 
-    rem ----------------------------
-    rem Start batch download with indexing
-    rem ----------------------------
-    yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
-        !EMBBED_ID3_CMD! ^
-        -o "%DOWNLOAD_DIR%\%%(autonumber+!SG_START_INDEX!)0!SG_PAD_SIZE!d - %%(title)s.%%(ext)s" %VIDEO_URL%
+    set "SG_ORDINAL=%%(autonumber+!SG_START_INDEX!)0!SG_PAD_SIZE!d - "
 )
+
+rem ----------------------------
+rem Start batch download with indexing
+rem ----------------------------
+yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
+    !EMBBED_ID3_CMD! ^
+    -o "%DOWNLOAD_DIR%\!SG_ORDINAL!!FNAME_FORMAT!" %VIDEO_URL%
+
 
 echo.
 echo ✅ Download complete.
@@ -175,40 +176,39 @@ if not exist "%URL_LINKS_FILE%" (
 
 :: --- Ask for filename style ---
 echo === Batch MP3 Download from urls.txt ===
-echo [1] Use default filenames
+echo [1] Use default filenames - default
 echo [2] Use indexed filenames (01 - Title.mp3)
 set /p index_choice="Choose filename style (1-2): "
 
-if "%index_choice%"=="1" (
-    yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
-        !EMBBED_ID3_CMD! ^
-        -o "%DOWNLOAD_DIR%\%%(title)s.%%(ext)s" -a "%URL_LINKS_FILE%"
-) else (
+:: default there is no ordinal
+set "BA_ORDINAL="
+if "%index_choice%"=="2" (
     rem ----------------------------
     rem Ask for start index
     rem ----------------------------
     CALL :GetUserInputNumber "Enter start index (number), default 1: " 1
-    SET START_INDEX=!ERRORLEVEL!
-    echo START_INDEX chosen = !START_INDEX!
+    SET BA_START_INDEX=!ERRORLEVEL!
+    echo BA_START_INDEX chosen = !BA_START_INDEX!
     :: Adjust for autonumber starting at 1
-    set /a START_INDEX=START_INDEX-1
-
+    set /a BA_START_INDEX=BA_START_INDEX-1
     
     rem ----------------------------
     rem Ask for Padding size (number of digits for padding (3 --we have 001, 002, ...))
     rem ----------------------------
     CALL :GetUserInputNumber "Enter Padding size (number), default 2 (1 becomes 01): " 2
-    SET PAD_SIZE=!ERRORLEVEL!
-    echo PAD_SIZE chosen = !PAD_SIZE!
-    
+    SET BA_PAD_SIZE=!ERRORLEVEL!
+    echo BA_PAD_SIZE chosen = !BA_PAD_SIZE!
 
-    rem ----------------------------
-    rem Start batch download with indexing
-    rem ----------------------------
-    yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
-        !EMBBED_ID3_CMD! ^
-        -o "%DOWNLOAD_DIR%\%%(autonumber+!START_INDEX!)0!PAD_SIZE!d - %%(title)s.%%(ext)s" -a "%URL_LINKS_FILE%"
+    set "BA_ORDINAL=%%(autonumber+!BA_START_INDEX!)0!BA_PAD_SIZE!d - "
 )
+
+rem ----------------------------
+rem Start batch download with indexing
+rem ----------------------------
+yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
+    !EMBBED_ID3_CMD! ^
+    -o "%DOWNLOAD_DIR%\!BA_ORDINAL!!FNAME_FORMAT!" -a "%URL_LINKS_FILE%"
+
 echo.
 echo ✅ Batch download complete.
 pause

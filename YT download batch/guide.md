@@ -156,10 +156,17 @@ Download entire playlist with index at beginning of filename
 ```batch
 yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
     --embed-metadata --embed-thumbnail --add-metadata ^
-    -o "%DOWNLOAD_DIR%\%%(playlist_index)s - %%(title)s.%%(ext)s" %PLAYLIST_URL%
+    -o "%DOWNLOAD_DIR%\%%(playlist_index)02d - %%(title)s.%%(ext)s" %PLAYLIST_URL%
+```
+OR
+```batch
+yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
+    --embed-metadata --embed-thumbnail --add-metadata ^
+    -o "%DOWNLOAD_DIR%\%%(playlist_autonumber)02d - %%(title)s.%%(ext)s" %PLAYLIST_URL%
 ```
 where 
 * `playlist_index` (numeric): Index of the video in the playlist padded with leading zeros according the final index
+* `playlist_autonumber` (numeric): Position of the video in the playlist download queue padded with leading zeros according to the total length of the playlist
 * Just as for single and download from list, you can customize the ordinal number as `%(playlist_index+10)03d`, `%(n_entries+1-playlist_index)d`
 * `n_entries` (numeric): Total number of extracted items in the playlist
 
