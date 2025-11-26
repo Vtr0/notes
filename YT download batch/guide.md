@@ -111,14 +111,15 @@ Each option using following parameter of `yt-dlp`:
 * [2]: using the parameter `playlist_index` (numeric): Index of the video in the playlist padded with leading zeros according the final index
 * [3]: using the parameter `playlist_autonumber` (numeric): Position of the video in the playlist download queue padded with leading zeros according to the total length of the playlist
 
-## Code customization
+# Code customization
 ### 🎯 Set Download Directory
 	set "DOWNLOAD_DIR=%userprofile%\Downloads"
 Or simply  
 
 	set "DOWNLOAD_DIR=.\YouTube-MP3"
 
-### Command explain
+## Command explain
+### Basic download command
 Following to Download One (or few youtube video whose url separate by a space) YouTube Video as MP3 with Full ID3 Tags
 ```batch
 yt-dlp -x --audio-format mp3 --audio-quality 192 ^
