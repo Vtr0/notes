@@ -70,16 +70,19 @@ Choose an option (1-4):
 
 ### 🔽 Single file mode
 Even the name, you can pase multiple urls for downloading. After type in url(s), you have to choose the filename mode  
-[1] ➤ Without Index in Filename: without the ordinal  
-[2] ➤ With Index in Filename: with the ordinal number at the start of file name.
-
-With mode [1], we have downloaded files as follows:
+```
+[1] Use default filenames (Title.mp3) - default
+[2] Use indexed filenames (01 - Title.mp3)
+```
+[1] ➤ Without Index in Filename: without the ordinal (default)  
+With this mode, we have downloaded files as follows:
 ```makefile
 LXNGVX, Warriyo - Mortals Funk Remix ｜ NCS - Copyright Free Music.mp3
 MXZI, sk3tch01, X972 - Montagem Toma ｜ Funk ｜ NCS - Copyright Free Music.mp3
 ```
 
-With mode [2], you have to type in the `start index` and `padding size`, for example with `START_INDEX = 5` and `PADDING_SIZE=3`, we have output file name as follows:
+[2] ➤ With Index in Filename: with the ordinal number at the start of file name.
+With this mode, you have to type in the `start index` and `padding size`, for example with `start index = 5` and `padding size = 3`, we have output file name as follows:
 ```makefile
 005 - LXNGVX, Warriyo - Mortals Funk Remix ｜ NCS - Copyright Free Music.mp3
 006 - MXZI, sk3tch01, X972 - Montagem Toma ｜ Funk ｜ NCS - Copyright Free Music.mp3
@@ -119,18 +122,25 @@ Each option using following parameter of `yt-dlp`:
 
 # Code customization
 ### 🎯 Set Download Directory
-	set "DOWNLOAD_DIR=%userprofile%\Downloads"
+	set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube-MP3"
 Or simply  
 
 	set "DOWNLOAD_DIR=.\YouTube-MP3"
-
+If the output directory not yet existed, the program will create it for you.
 ## Command explain
 ### Basic download command
+Most simple command:
+```batch
+yt-dlp -x --audio-format mp3 --audio-quality 5 ^
+    --embed-metadata --embed-thumbnail --add-metadata ^
+    -o "%DOWNLOAD_DIR%\%%(autonumber+0)02d - %%(title)s.%%(ext)s" %VIDEO_URL%
+```
+
 Following to Download One (or few youtube video whose url separate by a space) YouTube Video as MP3 with Full ID3 Tags
 ```batch
 yt-dlp -x --audio-format mp3 --audio-quality 192 ^
 	--embed-metadata --embed-thumbnail --add-metadata ^
-	-o "%DOWNLOAD_DIR%\%%(autonumber+!SG_START_INDEX!)0!SG_PAD_SIZE!d - %%(title)s.%%(ext)s" %VIDEO_URL%
+	-o "%DOWNLOAD_DIR%\%%(autonumber+!SG_START_INDEX!)0!SG_PAD_SIZE!d - !FNAME_FORMAT!" %VIDEO_URL%
 ```
 
 Explanation of Key Options:
@@ -149,6 +159,9 @@ Explanation of Key Options:
 	* `%%(title)s` → the placeholder to be filled with `video title` from id3 tag.
 	* `%%(ext)s` → file extension (mp3 after extraction). Similarly as `%%(title)s`
 	* May add  `-o "thumbnail:%%(title)s\%%(title)s.%%(ext)s"` will put the thumbnails in a folder with the same name as the video
+* `!FNAME_FORMAT!`: the format of output mp3 files that the program ask user to choose. The default value is `%%(title)s.%%(ext)s` meaning `<video title>.mp3`
+* `!SG_START_INDEX!`: is batch variable to set the first `ordinal number` that the programm will ask user to type in. The default value is `1`
+* `!SG_PAD_SIZE!`: the batch variable to define the `padding size` of `ordinal number` that the programm will ask user to type in. The default value is `2`
 * `%VIDEO_URL%` This is the playlist or video URL (batch variable) that yt-dlp will download. Can be a single video, list of videos separated by a space, the text file that contains all video links (each in one line), or playlist.
 
 Example output:
