@@ -28,7 +28,11 @@ If somehow `yt-dlp` fails to download mp3, you should upgrade it.
 First, you should choose the bitrate from 64kbps, 128kbps, 192kbps (default), 256kbps, 320kbps
 
 ### Quiet mode
-Choose if the quiet mode, if you choose anything other than `n/N`, the programm will take that as a `Yes`, meaning you will not have to choose too many setting for each download mode. The asking for `start-index`, `padding-size`, filename `ordinal` format will be suppressed and take the default setting.
+Choose if the quiet mode:
+```
+Enable quiet mode? (Y/N) [Y]: 
+```
+if you choose anything other than `n/N`, the programm will take that as a `Yes` - `Quiet mode ENABLED` meaning you will not have to choose too many setting for each download mode. The asking for `start-index`, `padding-size`, filename `ordinal` format will be suppressed and take the default setting.
 
 Except for the `Playlist` download mode, to avoid to automatically download too many videos in a playlist, the program still ask for the `playlist-start` and `playlist-end`
 ### id3 tag

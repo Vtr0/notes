@@ -167,9 +167,29 @@ git restore --source=<branch_name> <file_name>
 ```
 ## Compare
 ### Compare file
-#### Compare a File in Your Local Repository with Remote
+#### Compare `Working Directory` ↔ `Staged Version`
+```sh
+git diff <file>
+```
+This shows the difference between:
+* `Working directory` — your current edits
+* `Staged version` — what is prepared for the next commit
+
+#### Compare `Staged Version` ↔ `Last Commit` (HEAD)
+```sh
+git diff --cached <file>
+```
+or
+```sh
+git diff --staged <file>
+```
+(Both commands do the same thing.)  
+
+Replace `<file>` with `origin/main` to show all changes.
+
+#### Compare a File in Your `Local Repository` with `Remote`
 Before you compare the file, make sure you have the latest changes from the remote repository. This will ensure that your comparison is accurate.
-```bash
+```sh
 git fetch origin
 ```
 If you want to compare a file (e.g., file.txt) in your local repository with the version of the file in the remote branch (e.g., origin/main), you can use the following command:
@@ -180,7 +200,12 @@ Where
 * `origin/main`: Refers to the remote branch (e.g., main) as it exists on the remote repository (origin).
 * `--path/to/your/file.txt`: The path to the file you want to compare in your local working directory.
 
-#### Comparing the File in the Staging Area with the Remote
+To show all changes:
+```sh
+git diff origin/main
+```
+
+#### Comparing the File in the `Staging Area` with the `Remote`
 If you have already staged the file (i.e., added it to the index with git add), and you want to compare the staged version of the file with the remote branch, you can do so by:
 ```bash
 git diff --cached origin/main -- path/to/your/file.txt
@@ -190,7 +215,7 @@ Where
 * `origin/main`: This refers to the remote branch (e.g., main on origin).
 * `path/to/your/file.txt`: Path to the file you want to compare.
 
-#### Compare with Remote File Using `git log`
+#### List the commit history and pushed to `Remote` of a file
 
 If you're unsure about which commit you want to compare, you can check the recent commits on the remote branch using:
 
@@ -198,9 +223,15 @@ If you're unsure about which commit you want to compare, you can check the recen
 git log origin/main -- path/to/your/file.txt
 ```
 This will list the commit history for the specific file on the remote branch, helping you choose which commit to compare against.
-
+### Show staged but not committed files
+```sh
+git diff --cached
+```
 ### Show commits not pushed
 Show commits not pushed to the remote (simple)
+```sh
+git log origin/HEAD..HEAD
+```
 ```bash
 git log origin/branchname..HEAD
 ```

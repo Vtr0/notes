@@ -296,8 +296,8 @@ if !PL_START_INDEX! GTR 1 (
 if !PL_END_INDEX! GTR 0 (
     set "PL_RANGE_OPT=!PL_RANGE_OPT! --playlist-end !PL_END_INDEX!"
 )
-:: echo Playlist range options: !PL_RANGE_OPT!
-:: set "PL_RANGE_OPT=--playlist-items 1:3:2,140-"
+::echo Playlist range options: !PL_RANGE_OPT!
+set "PL_RANGE_OPT=--playlist-items 137-"
 
 :: Check if quiet mode is enabled, set the default filename style without ordinal and jump directly to download command
 if /i "%GL_QUIET%"=="Y" (
