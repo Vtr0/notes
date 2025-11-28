@@ -138,11 +138,12 @@ Or specify a range in one of the following formats:
 Or comprise of ranges with commas:
    Example: 1-3,5:7:2,9- to download items 1,2,3,5,7,and 9 to end
 ```
-There are lots of ways to quickly specify which items you want to download, but the most simple way is to type in the item number, such as `1,2,4,9`, or just type `Enter` to download whole playlist, be you should be careful when some playlist have large amount of videos.
+There are lots of ways to quickly specify which items you want to download, but the most simple way is to type in the item number, such as `1,2,4,9`.
 
 Some more examples:
 | Syntax                 |  Meaning  |
 |------------------------|-------------------------|
+| Empty (just press `Enter`)         | Download whole playlist - but you should be careful when some playlist have large amount of videos |
 | `1,2,5, -1, -5`         | item `1, 2, 5`, `last item` and the `5th last item` |
 | `1-3` or `1:3`          | item `1, 2, 3`     |
 | `140-` or `140:`        | item 140 to the end   |
