@@ -141,16 +141,16 @@ Or comprise of ranges with commas:
 There are lots of ways to quickly specify which items you want to download, but the most simple way is to type in the item number, such as `1,2,4,9`, or just type `Enter` to download whole playlist, be you should be careful when some playlist have large amount of videos.
 
 Some mote examples:
-| Syntax                  | Meaning                                                                                               |
-|-------------------------|-------------------------------------------------------------------------------------------------------|
-| `1,2,5`                 | item 1, 2, 5`                                                                                          |
-| `1-3` or `1:3`          | item `1, 2, 3`                                                                                          |
-| `140-` or `140:`        | item 140 to the end                                                                                   |
-| `:5`                    | item `1, 2, 3, 4, 5` (note that `-5` not work, since it is mistaken with `minus 5`)                                                    |
-| `:3:2`                  | item `1, 3` (from 1 to 3, step 2)                                                                    |
-| `-5::2`                 | from the 5th last item to the last item, step 2 (e.g., in a 15-item playlist: items `11, 13, 15`)       |
-| `::2`                   | every 2nd item starting at 1 → items `1, 3, 5...` (i.e., all odd-indexed items)                         |
-| `1-3, 4:5:2, 140-`        | combination of the above forms, separated by commas                                                   |
+| Syntax                 |  Meaning  |
+|------------------------|-------------------------|
+| `1,2,5, -1, -5`         | item `1, 2, 5`, `last item` and the `5th last item` |
+| `1-3` or `1:3`          | item `1, 2, 3`     |
+| `140-` or `140:`        | item 140 to the end   |
+| `:5`                    | item `1, 2, 3, 4, 5` (note that `-5` not work, since it is mistaken with `minus 5`)  |
+| `:3:2`                  | item `1, 3` (from 1 to 3, step 2) |
+| `-5::2`                 | from the 5th last item to the last item, step 2 (e.g., in a 15-item playlist: items `11, 13, 15`)  |
+| `::2`                   | every 2nd item starting at 1 → items `1, 3, 5...` (i.e., all odd-indexed items) |
+| `1-3, 4:5:2, 140-`        | combination of the above forms, separated by commas |
 <!-- 
 ```
 `1,2,5`	item 1,2,5
