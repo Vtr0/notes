@@ -191,7 +191,7 @@ If the output directory not yet existed, the program will create it for you.
 #### Separate folders for different `Uploader` and `Playlist`
 Go to line that call `yt-dlp` which looks as follows:
 ```
-yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% --yes-playlist ^
+yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% ^
 ....
 ```
 then replace 
