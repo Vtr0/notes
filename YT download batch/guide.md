@@ -7,8 +7,9 @@ Ensure `yt-dlp` is installed and updated, and ffmpeg is available in your system
 bash/cmd:	`winget install yt-dlp`  
 Upgrade `yt-dlp`: `winget install upgrade yt-dlp` or `yt-dlp -U`
 
-Install `ffmpeg` (not necessary): `winget install ffmpeg`
+Install `ffmpeg` : `winget install ffmpeg`
 
+See [yt-dlp dependencies](https://github.com/Vtr0/notes/blob/main/YT%20download%20batch/guide.md#quiet-mode) for more.
 ### Links
 YT-DLP on github: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file
 	
@@ -21,6 +22,18 @@ If somehow `yt-dlp` fails to download mp3, you should upgrade it.
 # Run batch file to Download
 * The batch file should be used: **`ytd.bat`**
 * All downloaded MP3 from YouTube Video will be embbed withFull `ID3 Tags`
+
+## Argument
+You can run `ytd.bat` with argument(s) as follows
+```
+ytd.bat -n
+ytd.bat -v
+ytd.bat -nv
+```
+* `-n`: The program will NOT ask for choosing too many settings when downloading, this is the same as set to `Y` when be asking in (`Quiet mode`)[#quiet-mode] below.
+* `-v` meaning verbose, adding argument `--console-title --verbose` to the `yt-dl`, the terminal will
+	* `--console-title`: Display progress in console titlebar
+	* `--verbose`: Print various debugging information
 
 ## Choose general settings
 
@@ -42,11 +55,11 @@ Choose the basic filename format, as in follows menu
 ```makefile
 ---------------------------------------
 Choose the desired filename format (default is option 1):
-1. <title>.<ext> (default)
-2. <artist> - <title>.<ext>
-3. <title> - [<id>].<ext>
-4. <title> - [<duration>].<ext>
-5. <artist> - <title> - [<duration>].<ext>
+    1. <title>.<ext> [default]
+    2. <artist> - <title>.<ext>
+    3. <title> - [<id>].<ext>
+    4. <title> - [<duration>].<ext>
+    5. <artist> - <title> - [<duration>].<ext>
 ---------------------------------------
 ```
 
@@ -73,10 +86,13 @@ Choose an option (1-4):
 ```
 
 ### 🔽 Single file mode
-Even the name, you can pase multiple urls for downloading. After type in url(s), you have to choose the filename mode  
-```
-[1] Use default filenames (Title.mp3) - default
-[2] Use indexed filenames (01 - Title.mp3)
+Even the name, you can pass multiple urls for downloading, for example, you can past in urls separeted by a space like this:
+`https://www.youtube.com/watch?v=pytdWKT-NV4 https://www.youtube.com/watch?v=eBaGlo1b3ZY`
+
+After type in url(s), you have to choose the filename mode  
+```makefile
+    [1] Use default filenames (Title.mp3) - [default]
+    [2] Use indexed filenames (01 - Title.mp3)
 ```
 [1] ➤ Without Index in Filename: without the ordinal (default)  
 With this mode, we have downloaded files as follows:
@@ -106,24 +122,62 @@ https://www.youtube.com/watch?v=eBaGlo1b3ZY
 Other user choice the same as for single download
 
 ### 📂 Download an Entire Playlist as MP3
-Download entire playlist with index at beginning of filename.
-You will be asked to type in `start index` (default `1`) and `end index` (default the very last video of the playlist)
+#### Choose items to download
+You will be asked to type in the list of items that you want to download:
+```text
+Choose the range of videos to download from the playlist:
+---------------------------------------
+Press Enter to download whole playlist.
+-------------------
+Or specify a range in one of the following formats:
+   + Format: "item, item, item". Example: 2,4,6 to download item 2, 4, 6
+   + Format: "[START]-[STOP]". Example: "3-5" to download items 3, 4, 5 
+   + Format: "[START]:[STOP][:STEP]". Example: "1:6:2" (downloads items 1, 3, 5). "-5::2" to download items from 5th last item to the last item with step size of 2. "::2" to download every even item in the playlist. There can also be missing [START] or [STOP] such as ":5", ":5:3", "139:", "139::2".
+   + "[START]-" or "[START]:" to download from [START] to the end. Example: "5-" or "5:" to download from item 5 to the end. 
+-------------------
+Or comprise of ranges with commas:
+   Example: 1-3,5:7:2,9- to download items 1,2,3,5,7,and 9 to end
+```
+There are lots of ways to quickly specify which items you want to download, but the most simple way is to type in the item number, such as `1,2,4,9`, or just type `Enter` to download whole playlist, be you should be careful when some playlist have large amount of videos.
 
-Then you have to set the `padding size`  
+Some mote examples:
+| Syntax                  | Meaning                                                                                               |
+|-------------------------|-------------------------------------------------------------------------------------------------------|
+| `1,2,5`                 | item 1, 2, 5                                                                                          |
+| `1-3` or `1:3`          | item 1, 2, 3                                                                                          |
+| `140-` or `140:`        | item 140 to the end                                                                                   |
+| `:5`                    | item 1 to 5 (note that `-5` not work)                                                    |
+| `:3:2`                  | item 1 and 3 (from 1 to 3, step 2)                                                                    |
+| `-5::2`                 | from the 5th last item to the last item, step 2 (e.g., in a 15-item playlist: items 11, 13, 15)       |
+| `::2`                   | every 2nd item starting at 1 → items 1, 3, 5... (i.e., all odd-indexed items)                         |
+| `1-3,4:5:2,140-`        | combination of the above forms, separated by commas                                                   |
+<!-- 
+```
+`1,2,5`	item 1,2,5
+`1-3` or `1:3`	item 1,2,3 
+`:3:2`		item 1, 3 (from 1 to 3, step 2)
+`140-` or `140:`	item 140 to the end
+`-5::2`		item form the 5th last item to the very last item, step 2. For example, if playlist has 15 items, this will download item 11, 13, 15
+`::2`		download `even` items 2,4,6... to the last item
+`1-3, 4:5:2, 140-`	Comprises of aabove, separeted with `,`
+``` -->
 
+#### Choose `ordinal` for filename
 Finally, choose the style for `ordinal` indexed number at the start of filename.
 ```makefile
-[1] Use default filenames <-- no ordinal number
-[2] Use indexed filenames (Index of the video in the playlist) <-- use the index of video in Playlist to be the ordinal
-[3] Use indexed filenames (Position of the video in the playlist download queue) <-- Use the position of downloaded mp3 file. So the video item number 4 in playlist can be set the ordinal of '01' if it is the first items being choosen to download
+[1] Use default filenames[default]
+[2] Use indexed filenames (Index of the video in the playlist)
+[3] Use indexed filenames (Position of the video in the playlist download queue)
 Choose filename indexed style (1-3): 
 ```
+Detailed meaning of each option as follows:
+| Option | Description  (Example with `padding size = 3`) | `yt-dlp` argument
+|--------|-------------|-------------|
+| `[1]` Use default filenames [default] | no ordinal number | use nothing |
+| `[2] Use indexed filenames (Index of the video in the playlist) | use the index of video in Playlist to be the ordinal. For example, you download item `8, 11`, the `ordinal` prefix of the file name is `008 - `, `011 -` | using the parameter `playlist_index` (numeric): Index of the video in the playlist padded with leading zeros according the final index |
+| `[3]` Use indexed filenames (Position of the video in the playlist **download queue**) | Use the position of downloaded mp3 file. So the video item number 4 in playlist can be set the ordinal of '01' if it is the first items being choosen to download. For example, you download item `8, 11, 35`, the `ordinal` prefix of the file name is `001 - `, `002 -`, `003 - ` | using the parameter `playlist_autonumber` (numeric): Position of the video in the playlist download queue padded with leading zeros according to the total length of the playlist |
 
-Each option using following parameter of `yt-dlp`:
-* [1]: use nothing
-* [2]: using the parameter `playlist_index` (numeric): Index of the video in the playlist padded with leading zeros according the final index
-* [3]: using the parameter `playlist_autonumber` (numeric): Position of the video in the playlist download queue padded with leading zeros according to the total length of the playlist
-
+**Choose padding size**: If you choose option [2] or [3], you have to do one more step to set the `padding size`  
 # Code customization
 ### 🎯 Set Download Directory
 	set "DOWNLOAD_DIR=%userprofile%\Downloads\YouTube-MP3"
