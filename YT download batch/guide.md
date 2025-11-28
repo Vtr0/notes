@@ -9,7 +9,7 @@ Upgrade `yt-dlp`: `winget install upgrade yt-dlp` or `yt-dlp -U`
 
 Install `ffmpeg` : `winget install ffmpeg`
 
-See [yt-dlp dependencies](https://github.com/Vtr0/notes/blob/main/YT%20download%20batch/guide.md#quiet-mode) for more.
+See [yt-dlp dependencies](https://github.com/yt-dlp/yt-dlp/tree/master?tab=readme-ov-file#dependencies) for more.
 ### Links
 YT-DLP on github: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file
 	
@@ -30,7 +30,7 @@ ytd.bat -n
 ytd.bat -v
 ytd.bat -nv
 ```
-* `-n`: The program will NOT ask for choosing too many settings when downloading, this is the same as set to `Y` when be asking in (`Quiet mode`)[#quiet-mode] below.
+* `-n`: The program will NOT ask for choosing too many settings when downloading, this is the same as set to `Y` when be asking in (Quiet mode)[#quiet-mode] below.
 * `-v` meaning verbose, adding argument `--console-title --verbose` to the `yt-dl`, the terminal will
 	* `--console-title`: Display progress in console titlebar
 	* `--verbose`: Print various debugging information
