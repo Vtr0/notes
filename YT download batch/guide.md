@@ -30,7 +30,7 @@ ytd.bat -n
 ytd.bat -v
 ytd.bat -nv
 ```
-* `-n`: The program will NOT ask for choosing too many settings when downloading, this is the same as set to `Y` when be asking in [`Quiet mode](#quiet-mode) below.
+* `-n`: The program will NOT ask for choosing too many settings when downloading, this is the same as set to `Y` when be asking in [`Quiet mode`](#quiet-mode) below.
 * `-v` meaning verbose, adding argument `--console-title --verbose` to the `yt-dl`, the terminal will
 	* `--console-title`: Display progress in console titlebar
 	* `--verbose`: Print various debugging information
