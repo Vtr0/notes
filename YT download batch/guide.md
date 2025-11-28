@@ -140,7 +140,7 @@ Or comprise of ranges with commas:
 ```
 There are lots of ways to quickly specify which items you want to download, but the most simple way is to type in the item number, such as `1,2,4,9`, or just type `Enter` to download whole playlist, be you should be careful when some playlist have large amount of videos.
 
-Some mote examples:
+Some more examples:
 | Syntax                 |  Meaning  |
 |------------------------|-------------------------|
 | `1,2,5, -1, -5`         | item `1, 2, 5`, `last item` and the `5th last item` |
@@ -148,7 +148,7 @@ Some mote examples:
 | `140-` or `140:`        | item 140 to the end   |
 | `:5`                    | item `1, 2, 3, 4, 5` (note that `-5` not work, since it is mistaken with `minus 5`)  |
 | `:3:2`                  | item `1, 3` (from 1 to 3, step 2) |
-| `-5::2`                 | from the 5th last item to the last item, step 2 (e.g., in a 15-item playlist: items `11, 13, 15`)  |
+| `-5::2`                 | from the 5th last item to the last item, step 2 (e.g., in a 15-item playlist → items `11, 13, 15`)  |
 | `::2`                   | every 2nd item starting at 1 → items `1, 3, 5...` (i.e., all odd-indexed items) |
 | `1-3, 4:5:2, 140-`        | combination of the above forms, separated by commas |
 <!-- 
@@ -193,18 +193,14 @@ Go to line that call `yt-dlp` which looks as follows:
 yt-dlp -x --audio-format mp3 --audio-quality %BITRATE% --yes-playlist ^
 ....
 ```
-to replace 
+then replace 
 ```
 %DOWNLOAD_DIR%\
 ```
-with to put downloaded mp3 in corresponding foler of its `uploader`, for example `NoCopyrightSounds\`
-```
-%DOWNLOAD_DIR%\%%(uploader)s\
-```
-or with (only for `Playlist` download mode) to put downloaded mp3 into sub-folder `<uploader>\<playlist title>`, for example `NoCopyrightSounds\NCS The Best of 2025\`
-```
-%DOWNLOAD_DIR%\%%(uploader)s\%%(playlist)s\
-```
+* with `%DOWNLOAD_DIR%\%%(uploader)s\` to put downloaded mp3 in corresponding foler of its `uploader`, for example `NoCopyrightSounds\`
+
+* [for `Playlist` download mode only] with `%DOWNLOAD_DIR%\%%(uploader)s\%%(playlist)s\` to put downloaded mp3 into sub-folder `<uploader>\<playlist title>`, for example `NoCopyrightSounds\NCS The Best of 2025\`
+
 ## Command explain
 ### Basic download command
 Most simple command:
