@@ -10,6 +10,26 @@ Upgrade `yt-dlp`: `winget install upgrade yt-dlp` or `yt-dlp -U`
 Install `ffmpeg` : `winget install ffmpeg`
 
 See [yt-dlp dependencies](https://github.com/yt-dlp/yt-dlp/tree/master?tab=readme-ov-file#dependencies) for more.
+
+### Site supported
+See the list of sites that `yt-dlp` support, run:
+```
+yt-dlp --list-extractors
+```
+or
+```
+yt-dlp --extractor-descriptions
+
+```
+To find a specific site that `yt-dlp` support:
+```
+yt-dlp --list-extractors | find "youtube"
+```
+or on Mac:
+```
+yt-dlp --list-extractors | grep youtube
+```
+Some interesting sites: `VTV`, `VTVGO`, `FPTplay`, `ZingMp3`
 ### Links
 YT-DLP on github: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file
 	
