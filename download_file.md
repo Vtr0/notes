@@ -3,7 +3,7 @@
 ## Install cURL
 Curl is a command-line tool for transferring data from or to a server using URLs. You can go [github](https://github.com/curl/curl) or [https://curl.se/](https://curl.se/). To install cURL on window
 ```batch
-winget install cUrl
+winget install curl
 ```
 
 ## Download single url
@@ -49,7 +49,7 @@ pause
 # GET DURATION FOR ALL MP3 FILES
 
 ## Using batch file to get duration for REMOTE mp3 links
-grab_dur.bat will get durations of all url stored in "input.txt" and save to "output.txt"
+grab_dur.bat will get durations of all url stored in `"input.txt"` and save to `"output.txt"`
 Note that this using Curl and ffprobe (which part of ffmpeg - can install by "winget install ffmpeg")
 Install Curl: winget install curl
 
@@ -243,19 +243,19 @@ pause
 Argument Parsing:  
 `%1, %2, %3, and %4` are used for the `base_url, start_number, end_number, and padding_size` respectively.
 ## Padding Logic:
-We calculate the number of digits in the current  number (numberLength).
+- We calculate the number of digits in the current  number (numberLength).
 If the number of digits is less than the specified padding size, we pad the number with leading zeros.
-The line set `"formattedNumber=000000000%%i"` ensures enough leading zeros are added before extracting the required number of digits with `!formattedNumber:~-!paddingSize!`.
-Wildcard Replacement:
+- The line set `"formattedNumber=000000000%%i"` ensures enough leading zeros are added before extracting the required number of digits with `!formattedNumber:~-!paddingSize!`.
+- Wildcard Replacement:
 We replace the * in the base URL with the formatted number.
 ## Example Usage:
-Save the batch file as generate_urls_with_padding.bat.
+Save the batch file as `generate_urls_with_padding.bat`.
 Run it with the following command:
 ```
 generate_urls_with_padding.bat "http://example.com/page-*" 1 141 5
 ```
 ## Example Output:
-For the command generate_urls_with_padding.bat `"http://example.com/page-*" 1 141 5`, the output will be:
+For the command `generate_urls_with_padding.bat "http://example.com/page-*" 1 141 5`, the output will be:
 ```
 http://example.com/page-00001
 http://example.com/page-00002
