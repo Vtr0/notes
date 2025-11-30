@@ -304,14 +304,14 @@ for link in links:
 ```
 ### Explanation:
 1) input(): The program uses input() to ask the user for:
-	* `Base URL`: The URL template with * as the placeholder for the index (e.g., https://example.com/page-*.html).
-	*`Start Index`: The starting index of the range.
+	* `Base URL`: The URL template with `*` as the placeholder for the index (e.g., `https://example.com/page-*.html`).
+	* `Start Index`: The starting index of the range.
 	* `End Index`: The ending index of the range.
 	* `Padding Size`: The padding size for the index (e.g., 3 for 001, 002, etc.).
 2) The rest of the code remains the same and generates the list of links based on user input.
 ### Example Input and Output:
 #### Example Input:
-Enter the base URL (use '*' as the placeholder for the index): `https://example.com/page-*.html`
+Enter the base URL (use `*` as the placeholder for the index): `https://example.com/page-*.html`
 ```batch
 Enter the starting index: 1
 Enter the ending index: 5
