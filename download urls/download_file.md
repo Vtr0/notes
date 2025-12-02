@@ -46,7 +46,7 @@ files.txt should look as follows
 ```
 ### Batch file to run cUrl
 Create batch file as follows:  
-`download_mp3.bat`
+`.\Code\download_mp3.bat`
 ```batch
 REM download_mp3.bat
 @echo off
@@ -89,7 +89,7 @@ winget install curl ffmpeg
 ```
 
 ### Batch file to get duration
-`grab_dur.bat`
+`.\Code\Duration\grab_dur.bat`
 ```batch
 @echo off
 setlocal enabledelayedexpansion
@@ -167,7 +167,7 @@ pip install mutagen
 ```
 
 ### Python code file
-`get_dur.py`
+`.\Code\Duration\get_dur.py`
 ```python
 import os
 from mutagen.mp3 import MP3
@@ -204,232 +204,33 @@ with open(output_file, "w", encoding="utf-8") as f:
 
 print(f"\nAll durations saved to: {output_file}")
 ```
-
-# create `input.txt`
-```batch
-@echo off
-setlocal enabledelayedexpansion
-
-:: Check if required arguments are passed
-if "%~4"=="" (
-    echo Usage: %0 base_url start_number end_number padding_size
-    exit /b
-)
-
-:: Get the arguments
-set baseURL=%1
-set start=%2
-set end=%3
-set paddingSize=%4
-
-:: Check if the base URL contains a wildcard (*)
-echo %baseURL% | findstr /C:"*" >nul
-if errorlevel 1 (
-    echo Error: Base URL must contain a wildcard (*) in the place of the number.
-    exit /b
-)
-
-:: Loop from start to end
-for /L %%i in (%start%, 1, %end%) do (
-    :: Get the current number and the padding size
-    set /a number=%%i
-    set "formattedNumber=%%i"
-
-    :: Check if the number length is less than the padding size, if so, pad with leading zeros
-    set "numberLength=0"
-    for /l %%j in (1,1,10) do (
-        set /a "div=%%i / 10"
-        if "!div!"=="0" (
-            goto endLoop
-        )
-        set /a "numberLength+=1"
-        set /a "i=div"
-    )
-    
-    :endLoop
-    set /a "numberLength+=1"
-
-    if !numberLength! lss %paddingSize% (
-        set "formattedNumber=000000000%%i"
-        set "formattedNumber=!formattedNumber:~-!paddingSize!"
-    )
-
-    :: Replace the wildcard in the base URL with the formatted number
-    set URL=!baseURL:*=!formattedNumber!
-    echo !URL!
-)
-
-endlocal
-pause
+-------------------------------
+# FREE DOWNLOAD MANAGER links generator
+```javascript
+/*
+link: the links with asterik * at the number, such as https://archive.org/download/gia-thien/*.mp3
+f: from number; t: to number
+pad: number of "0" to pad at start of the number
+*/
+fdmLink = (link,f,t, pad = 0) => {
+	let links=[];
+	for(let i=f; i<=t; i++) links.push(link.replace("*", (i+"").padStart(pad,"0") ));
+	let ret = links.join("\n");
+	copy(ret);
+	return ret;
+}
 ```
-## Key Steps:
-Argument Parsing:  
-`%1, %2, %3, and %4` are used for the `base_url, start_number, end_number, and padding_size` respectively.
-## Padding Logic:
-- We calculate the number of digits in the current  number (numberLength).
-If the number of digits is less than the specified padding size, we pad the number with leading zeros.
-- The line set `"formattedNumber=000000000%%i"` ensures enough leading zeros are added before extracting the required number of digits with `!formattedNumber:~-!paddingSize!`.
-- Wildcard Replacement:
-We replace the * in the base URL with the formatted number.
+
 ## Example Usage:
-Save the batch file as `generate_urls_with_padding.bat`.
-Run it with the following command:
-```
-generate_urls_with_padding.bat "http://example.com/page-*" 1 141 5
+Paste above code into `Console` in Chrome/Firefox `Developer Tool`, then run  the following command:
+```javascript
+fdmLink("http://example.com/page-*", 1, 141, 5)
 ```
 ## Example Output:
-For the command `generate_urls_with_padding.bat "http://example.com/page-*" 1 141 5`, the output will be:
+For the above command, the output will be. This output was already copied into clipboard:
 ```
 http://example.com/page-00001
 http://example.com/page-00002
 http://example.com/page-00003
 ...
 http://example.com/page-00141
-```
-**Explanation of Output:**
-* With padding size 5, numbers like 1 are padded to 00001, 2 becomes 00002, and so on.
-* For larger numbers (e.g., 141), the number isn't truncated and will be displayed as 00141 because it fits within the 5-character width.
-## Key Features:
-* Padding size is flexible. If the number is smaller than the padding size, leading zeros will be added.
-* Larger numbers (that exceed the padding size) are left intact without truncation.
-
-# gen links for above format
-```python
-def generate_links(base_url, start_index, end_index, padding_size):
-    links = []
-    
-    # Iterate through the range from start_index to end_index
-    for i in range(start_index, end_index + 1):
-        # Format the index with padding
-        formatted_index = str(i).zfill(padding_size)
-        
-        # Replace '*' with the formatted index in the base URL
-        link = base_url.replace('*', formatted_index)
-        
-        # Add the generated link to the list
-        links.append(link)
-    
-    return links
-
-# Ask the user to input the required arguments
-base_url = input("Enter the base URL (use '*' as the placeholder for the index): ")
-start_index = int(input("Enter the starting index: "))
-end_index = int(input("Enter the ending index: "))
-padding_size = int(input("Enter the padding size (e.g., 3 for 001, 002, etc.): "))
-
-# Generate the links
-links = generate_links(base_url, start_index, end_index, padding_size)
-
-# Print the generated links
-print("\nGenerated Links:")
-for link in links:
-    print(link)
-```
-### Explanation:
-1) input(): The program uses input() to ask the user for:
-	* `Base URL`: The URL template with `*` as the placeholder for the index (e.g., `https://example.com/page-*.html`).
-	* `Start Index`: The starting index of the range.
-	* `End Index`: The ending index of the range.
-	* `Padding Size`: The padding size for the index (e.g., 3 for 001, 002, etc.).
-2) The rest of the code remains the same and generates the list of links based on user input.
-### Example Input and Output:
-#### Example Input:
-```batch
-Enter the base URL (use '*' as the placeholder for the index): https://example.com/page-*.html
-Enter the starting index: 1
-Enter the ending index: 5
-Enter the padding size (e.g., 3 for 001, 002, etc.): 3
-```
-#### Example Output:
-```
-Generated Links:
-https://example.com/page-001.html
-https://example.com/page-002.html
-https://example.com/page-003.html
-https://example.com/page-004.html
-https://example.com/page-005.html
-```
-# Download with generated links
-```python
-import subprocess
-
-def generate_links(base_url, start_index, end_index, padding_size):
-    links = []
-    
-    # Iterate through the range from start_index to end_index
-    for i in range(start_index, end_index + 1):
-        # Format the index with padding
-        formatted_index = str(i).zfill(padding_size)
-        
-        # Replace '*' with the formatted index in the base URL
-        link = base_url.replace('*', formatted_index)
-        
-        # Add the generated link to the list
-        links.append(link)
-    
-    return links
-
-def download_links(links):
-    for link in links:
-        # Call curl to download the link
-        print(f"Downloading: {link}")
-        try:
-            # Using subprocess to call the curl command
-            subprocess.run(["curl", "-O", link], check=True)
-            print(f"Successfully downloaded: {link}")
-        except subprocess.CalledProcessError:
-            print(f"Failed to download: {link}")
-
-# Ask the user to input the required arguments
-base_url = input("Enter the base URL (use '*' as the placeholder for the index): ")
-start_index = int(input("Enter the starting index: "))
-end_index = int(input("Enter the ending index: "))
-padding_size = int(input("Enter the padding size (e.g., 3 for 001, 002, etc.): "))
-
-# Generate the links
-links = generate_links(base_url, start_index, end_index, padding_size)
-
-# Print the generated links
-print("\nGenerated Links:")
-for link in links:
-    print(link)
-
-# Download the generated links using curl
-download_links(links)
-```
-### Explanation:
-* `subprocess.run(["curl", "-O", link], check=True)`: This line calls the curl command to download the file from each link. The -O option tells curl to save the file with its original name (the last part of the URL).
-* Error Handling: If curl fails to download a link, the `subprocess.CalledProcessError` exception is caught, and an error message is printed.
-### Example:
-If you enter the following inputs:
-```batch
-Enter the base URL (use '*' as the placeholder for the index): https://example.com/page-*.html
-Enter the starting index: 1
-Enter the ending index: 3
-Enter the padding size (e.g., 3 for 001, 002, etc.): 3
-```
-It will generate and download:
-```
-https://example.com/page-001.html
-https://example.com/page-002.html
-https://example.com/page-003.html
-```
-### Example Output:
-```batch
-Generated Links:
-https://example.com/page-001.html
-https://example.com/page-002.html
-https://example.com/page-003.html
-
-Downloading: https://example.com/page-001.html
-Successfully downloaded: https://example.com/page-001.html
-Downloading: https://example.com/page-002.html
-Successfully downloaded: https://example.com/page-002.html
-Downloading: https://example.com/page-003.html
-Successfully downloaded: https://example.com/page-003.html
-```
-### Requirements:
-`curl` should be installed on your system. Most Linux distributions and macOS come with curl by default. For Windows, run following in command terminal:
-```
-winget install curl
-```

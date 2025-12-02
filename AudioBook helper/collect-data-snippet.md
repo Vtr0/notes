@@ -136,22 +136,6 @@ m = c.map(t => {return {tit: t.title.trim().replace("-", "–"), dur:toHhMmSs(t.
 copy(m);
 ```
 -------------------------------
-### FREE DOWNLOAD MANAGER links generator
-```javascript
-/*
-link: the links with asterik * at the number, such as https://archive.org/download/gia-thien/*.mp3
-f: from number; t: to number
-pad: number of "0" to pad at start of the number
-*/
-fdmLink = (link,f,t, pad = 0) => {
-	let links=[];
-	for(let i=f; i<=t; i++) links.push(link.replace("*", (i+"").padStart(pad,"0") ));
-	let ret = links.join("\n");
-	copy(ret);
-	return ret;
-}
-```
--------------------------------
 #### remove STT:
 ```javascript
 x = data_2.ach_Data; x.books.forEach(b => b.parts.forEach(p => {if(p.hasOwnProperty("stt")) delete p.stt})); copy(x) 
