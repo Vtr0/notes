@@ -1,5 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
+echo ================================
+echo Download Files - Overcome cross-origin restrictions
+echo ================================
 
 REM Path to your text file
 set "filelist=files.txt"

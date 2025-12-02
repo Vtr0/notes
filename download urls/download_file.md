@@ -52,6 +52,10 @@ REM download_mp3.bat
 @echo off
 setlocal enabledelayedexpansion
 
+echo ================================
+echo Download Files - Overcome cross-origin restrictions
+echo ================================
+
 REM Path to your text file
 set "filelist=files.txt"
 
@@ -67,6 +71,11 @@ for /f "tokens=1* delims= " %%A in (%filelist%) do (
 
 echo All downloads completed.
 pause
+```
+### Code modification
+For some other host that prevent cross-origin, even when you paste the direct link to browser's addressbar, you should change the `referer` to corresponding host, that is, change following part of the code:
+```
+-H "Referer: https://radiotruyen.me"
 ```
 
 # GET DURATION FOR ALL MP3 FILES
@@ -93,6 +102,11 @@ winget install curl ffmpeg
 ```batch
 @echo off
 setlocal enabledelayedexpansion
+
+echo ================================
+echo Grab the duration of mp3 from list of links
+echo Overcome cross-origin restrictions
+echo ================================
 
 rem === Input and output files ===
 set "INPUT_FILE=input.txt"
@@ -148,6 +162,11 @@ echo -------------------------------------
 echo Results saved to "%OUTPUT_FILE%"
 pause
 ```
+### Code modification
+For some other host that prevent cross-origin, even when you paste the direct link to browser's addressbar, you should change the `referer` to corresponding host, that is, change following part of the code:
+```
+-H "Referer: https://radiotruyen.me"
+```
 ### Output file
 The output file `output.txt` will looks as following. Adding `[]` we will have a json file
 ```json
@@ -158,7 +177,7 @@ The output file `output.txt` will looks as following. Adding `[]` we will have a
 ```
 
 ## Using python to get duration for LOCAL mp3 files
-Using python to get the duration of all mp3 files in the same folder
+Using python to get the duration of all mp3 files in the same folder.
 
 __Requirement__  
 we need Mutagen - which is a Python library used for handling audio metadata, also known as tags. It supports a wide range of audio formats, including MP3, Ogg Vorbis, FLAC, and others.

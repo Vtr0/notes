@@ -1,6 +1,11 @@
 @echo off
 setlocal enabledelayedexpansion
 
+echo ================================
+echo Grab the duration of mp3 from list of links
+echo Overcome cross-origin restrictions
+echo ================================
+
 rem === Input and output files ===
 set "INPUT_FILE=input.txt"
 set "OUTPUT_FILE=output.txt"
