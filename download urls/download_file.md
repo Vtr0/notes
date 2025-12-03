@@ -26,11 +26,24 @@ curl -L -H "User-Agent: Mozilla/5.0" --create-dirs --output-dir "temp-dir" -o "#
 ```batch
 curl -L -H "User-Agent: Mozilla/5.0" -O "https://archive.org/download/dai-chua-te_202202/dct-[001-100].mp3"
 ```
-
+* Specify output directory, specify output filename from the value in the range and overcome cross-origin (for example here, the link from `audiosite.net` - which has very strick `block-cross-origin` policy)  
+Here, we have to simulate a full browser request from same origin. Of course, for `audiosite.net`, the sample url below is just a part of a full-chapter mp3
+```batch
+curl -L --create-dirs --output-dir "temp-dir" -o "3.mp3" \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Safari/537.36" \
+  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+  -H "Accept-Language: en-US,en;q=0.5" \
+  -H "Referer: https://truyen.audiosite.net/" \
+  -H "Origin: https://audiosite.net/" \
+  "https://truyen.audiosite.net/?mode=VN&token=aHR0cHM6Ly9hcmNoaXZlLm9yZy9kb3dubG9hZC9naWEtdGhpZW4vNC5tcDN8MTc2NzI1MzI2NHxiNzYwZjcyMzY5MGFkZDQ0ODNkNzMyMWNiMTMyNTFhYzBhNjNkMTM1NGVkM2FjNjZmMTVlZTNlYzQxNmE3ODZk"   
+```
 **Where**:
+* `-L`: follow redirects
+* `-H` stands for Header: It lets us manually add any HTTP header to the request.
 * `--output-dir "temp-dir"`: put downloaded files in the folder
 * `--create-dirs`: force to create folder it it not yet existed
 * `-o "#1.mp3"`: the output filenames (`#1`) will take from the wildcarted range, in this case is `[1-70]`. 
+* `-O`: save file using the remote filename
 * `[1-70]`: The range to create batch download. The range can be other form such as `[1:10:2]`, `[a-z:2]`, `{one,two,three}`
 * If you have multiple `range` in the url, the output file can do multiple replacement `#1`, `#2`,... on output filenames as example below (in which, `#1` will get value from `{site,host}`, `#2` get value from the range `[1-5]`):
 ```
