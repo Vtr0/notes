@@ -1,4 +1,13 @@
-# Get link from `archive.org`
+# Extract data for Audio Book from `archive.org`
+
+## Requirement
+The program requires `BeautifulSoup` for reading html markup and `pyperclip` to copy text to clipboard. You can install both libraries by run following command in Window `command prompt`:
+```batch
+pip install BeautifulSoup
+pip install pyperclip
+```
+## The program
+Using following `python` program
 
 ```python
 import requests
@@ -134,4 +143,4 @@ if __name__ == "__main__":
 * Replace the collection's `archive.org` link to `url`, name of the artist to `artist`
 * You might want to modify the `grp` value inside `full_data` variable to match your audio book's group id.
 ## Output
-The Audio Book's full book data is copied to clipboard. All you need is just paste it into some online json editor such as [Json Editor](https://jsoneditoronline.org/)
+The Audio Book's full book data is copied to clipboard. All you need is just paste it into some online json editor such as [Json Editor](https://jsoneditoronline.org/) to re-format if needed.
