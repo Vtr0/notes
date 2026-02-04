@@ -57,7 +57,7 @@ def transform_items(items, download_url):
 
     for item in items:
         transformed = {
-            "tit": item.get("title"),
+            "tit": item.get("title").replace(' - ', " – "),
             "dur": seconds_to_mmss(item.get("duration", 0)),
             "url": [("https://archive.org" + unquote(src.get("file"))).replace(download_url,"").replace(".mp3", "") for src in item.get("sources", [])]
         }
@@ -78,7 +78,7 @@ def extract_title(html):
 
 # Example usage
 if __name__ == "__main__":
-    url = "https://archive.org/details/05-livin-on-the-edge_202508"
+    url = "https://archive.org/details/fromzero-deluxedition"
     download_url = url.replace("/details/", "/download/") + "/"
     # 1. Fetch HTML content
     response = requests.get(url, timeout=10)
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     image_url = extract_image_url(html).replace("?cnt=0", "")
     print("Image URL:", image_url)
 
-    artist = "Aerosmith"
+    artist = "Linkin Park"
     full_data = {
         "bookId": "",
         "title": extract_title(html),
