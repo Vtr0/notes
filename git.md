@@ -247,6 +247,8 @@ git log origin/branchname..HEAD
 * [Washington Univ](https://eecs.wsu.edu/~aofallon/GitGuide.pdf)  
 * [Utah Univ](https://groundwater.usu.edu/assets/pdf/How_to_Git.pdf)  
 * [John Mathew](https://johnmathews.is/documents/Rys-Git-Tutorial.pdf): extensive long guide
+* [How git works](https://www.facebook.com/reel/1519958102599118
+)
 
 ## Git Youtube resource
 [Mosh - Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)  
