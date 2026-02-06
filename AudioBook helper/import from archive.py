@@ -49,7 +49,16 @@ def extract_playlist_json(html):
 
 def seconds_to_mmss(seconds):
     seconds = int(float(seconds))  # handle "508.24" safely
-    return f"{seconds // 60:02d}:{seconds % 60:02d}"
+    
+    if seconds >= 3600:
+        # Format as H:MM:SS
+        hours = seconds // 3600
+        minutes = (seconds % 3600) // 60
+        seconds = seconds % 60
+        return f"{hours}:{minutes:02d}:{seconds:02d}"
+    else:
+        # Format as MM:SS
+        return f"{seconds // 60:02d}:{seconds % 60:02d}"
 
 
 def transform_items(items, download_url):
@@ -78,7 +87,7 @@ def extract_title(html):
 
 # Example usage
 if __name__ == "__main__":
-    url = "https://archive.org/details/fromzero-deluxedition"
+    url = "https://archive.org/details/quang-am-chi-ngoai-full/"
     download_url = url.replace("/details/", "/download/") + "/"
     # 1. Fetch HTML content
     response = requests.get(url, timeout=10)
