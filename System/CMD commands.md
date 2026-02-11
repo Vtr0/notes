@@ -30,6 +30,7 @@ Commands used for navigating, organizing, and manipulating the file system.
 | **attrib** | Displays or changes file attributes (e.g., hidden, read-only, system). | `attrib -h -s -r C:\file.txt` |
 | **edit** | Opens a simple text editor (if installed) within the prompt. | `edit config.txt` |
 
+**Advanced commands**
 | Command | Explanation | Example |
 | :--- | :--- | :--- |
 | **xcopy** | Copies files and directories, including trees and hidden/system files. | `xcopy C:\Projects D:\Backup /E /H /C /I` |
@@ -145,7 +146,7 @@ Commands to manage permissions, accounts, and elevated privileges.
 | **icacls** | Displays or modifies Access Control Lists (ACLs) for permissions. | `icacls C:\Folder /grant John:F` |
 | **cacls** | A legacy command used to display or change file permissions. | `cacls report.doc /G John:F` |
 | **runas** | Runs a specific program as another user (e.g., Administrator). | `runas /user:Admin cmd` |
-| **sudo** | Runs elevated commands inline (New for Windows 11; must be enabled). | `sudo del file.txt` |
+| **sudo** | Runs elevated commands inline. <br>This is a feature that comes disabled by default on Windows 11. If you want to enable it, you have to open `Settings > System > For developers`, turn on the `Enable sudo` toggle switch and choose the `Inline` option to run elevated commands within the same window as on Linux and macOS. | `sudo del file.txt` |
 | **auditpol** | Displays or sets the current audit policy configurations. | `auditpol /get /category:*` |
 | **gpresult** | Displays the Resultant Set of Policy (RSoP) for a user/computer. | `gpresult /r` |
 | **secedit** | Analyzes and configures system security by comparing settings to templates. | `secedit /analyze /db analysis.sdb` |
@@ -454,7 +455,6 @@ In CMD, everything is based on **streams**:
 | `2> NUL` | 2 | Discard stderr | `dir bad 2> NUL` | Hide errors |
 | `> NUL 2>&1` | 1+2 | Discard everything | `cmd > NUL 2>&1` | Silent execution |
 
-Example:
 **Example 1 — Filter Errors**
 
 ```cmd
