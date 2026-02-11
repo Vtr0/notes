@@ -1,6 +1,11 @@
 # Rescue USB drive
-- [Hiren](https://www.hirensbootcd.org/)
-- [Multi Boot Pendrive](https://howtofixmypc.com/howtofixmypc-com-multi-boot-pendrive/)
+
+| Tool | Description |
+|------|------------|
+| [Hiren’s BootCD](https://www.hirensbootcd.org/) | **Bootable diagnostic and repair toolkit** used to troubleshoot and fix computers, especially Windows PCs. [Screenshot](https://www.hirensbootcd.org/screenshots/) |
+| [Ventoy](https://www.ventoy.net/en/index.html) | Open-source tool that lets you create a multi-boot USB drive by simply copying ISO (or other bootable image) files onto it — no need to reformat the USB each time. [Screenshot](https://www.ventoy.net/en/screenshot.html) |
+
+See [Multi Boot Pendrive](https://howtofixmypc.com/howtofixmypc-com-multi-boot-pendrive/) for step-by-step guide to create an USB drive that can boot multiple operating systems or tools from a single device.
 
 # Comprehensive Windows Command Prompt (CMD) Master Reference
 Sources:
@@ -87,6 +92,7 @@ Commands for monitoring hardware specifications and controlling running apps.
 | **path** | Displays or sets the search path for executable files. | `path` |
 | **title** | Sets the title for the Command Prompt window. | `title Admin Console` |
 | **powercfg** | Analyzes power issues or generates battery health reports. | `powercfg /batteryreport` |
+| **driverquery** | Displays a list of installed drivers. | `driverquery` |
 
 ---
 
