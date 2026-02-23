@@ -1,0 +1,1768 @@
+{
+  "bookId": "b852797d",
+  "title": "Ai Bảo Hắn Tu Tiên!",
+  "eTitle": "谁让他修仙的！- Shei Rang Ta Xiuxian De!",
+  "author": "Tối Bạch Ô Nha",
+  "type": "Tiên Hiệp",
+  "mc": "Lão Trần",
+  "cover": "https://nhattruyen.one/uploads/images/202511/ai-bao-han-tu-tien-lao-tran_600x460_6923f185996ef.jpeg",
+  "ssrc": [
+    "https://nhattruyen.one/ai-bao-han-tu-tien-lao-tran",
+    "https://archive.org/details/abhtt--17590/",
+    "https://thuvienanime.net/ai-bao-han-tu-tien/",
+    "https://thuvienanime.net/lam-dong/"
+  ],
+  "wc": {
+    "url": [
+      {
+        "urlLine": 0,
+        "nd": 1,
+        "wcSrc": "https://archive.org/download/DPTK2_NgheAudio/<*~~*>.mp3"
+      }
+    ],
+    "tit": "Ai Bảo Hắn Tu Tiên - Tập <*~~*>"
+  },
+  "grp": ["VDCK.MCLTABHTT$5X", "XIANXIA.MMC", "XIANXIA.MMC"],
+  "autoTap": 20,
+  "skipStart": 0,
+  "year": "2023-2025",
+  "intro": "<b>Ai Bảo Hắn Tu Tiên!</b> thật sự là một câu chuyện siêu hài, là tiểu thuyết cổ điển tiên hiệp kết hợp sảng văn, tính cách nhân vật chính vô sỉ, được sáng tác bởi tác giả Tối Bạch Đích Ô Nha.<br><br> Mở đầu tiểu thuyết, Lục Dương khăn gói quả mướp đi thử vận may tại Vấn Đạo Tông. Lý do hàng đầu khi hắn chọn nơi này là vì nó ‘gần nhà’. Nói đùa thế thôi, Vấn Đạo Tông môn là một giáo phái tu tiên tiên rất lớn. Có lịch sử hàng mấy trăm năm, danh tiếng lẫy lừng.<br> Trên đường đi Lục Dương gặp hàng xóm nên nhận lời mời cùng đi với hắn ta. Lại gặp thêm một cô nương khác, cả bọn nhầm lẫn nàng ta cũng là đệ tử sắp tham gia kỳ thi. Ba người cùng nhau thảo luận hăng say về cách gian lận để vượt qua bài kiểm tra.<br> Nhưng Lục Dương lại không ngờ rằng, vị cô nương xinh đẹp thông minh hoạt bát này lại là người giám sát cho họ. May mắn cái đề thi do anh hàng xóm nhà giàu mua được là hàng cũ cách đây hai mươi năm trước nên chẳng có tác dụng gì.<br> Tuy nhiên không vì thế mà Lục Dương và đám bằng hữu của hắn đi đường chính đạo. Mạch não của bọn họ không hề bình thường, luôn chọn cách khác thường, hơi ‘tà đạo' hại não để làm.<br> Ranh ma là thế nhưng Lục Dương cũng là một thiên tài chân chính. Chứ không phải chỉ dựa vào việc khôn lỏi mà đứng vững được ở Vấn Đạo Tông. Các loại kỹ năng luyện tập học nhanh hiểu lẹ khiến người ta thán phục.<br> Chẳng bao lâu thực lực nhanh chóng tăng lên, áp chế được cả sư phụ của mình. Từng bước trở thành người nắm giữ quyền lực của giáo phái tông môn, xử lý sự vụ vô cùng thành thạo. Đây cũng được xem như con đường chính đạo mà bất kỳ nam chính nào cũng sẽ trải qua.<br> Đừng vì thế mà cảm thấy nhàm chán, phần sau vẫn còn cái hay. Lão Nhã rất thích cài cắm những điều bất ngờ trong từng chương truyện, xem rất thú vị nhen. Ví dụ như Lục Dương nhận nhiệm vụ của giáo phái xuống núi diệt trừ yêu quái nhưng con yêu quái kia hoá ra lại là một con vẹt. Con vẹt dẫn đường đi giải cứu một gia đình trộm mộ? Còn được đối phương chia sẻ kinh nghiệm cướp mộ đáng sợ?<br> Quả là một nhiệm vụ ba chấm hết nói nổi.<br><br> Tóm lại Ai Bảo Hắn Tu Tiên là một cuốn tiểu thuyết thú vị, nhẹ nhàng, siêu hài hước với những tình tiết bất ngờ. Môn phái của Lục Dương lúc nào cũng tràn ngập tiếng cười không ngớt, mang đến cho mọi người cảm giác rằng họ là những người thật sự rất hạnh phúc. Khi Lục Dương bước ra giang hồ, cũng không thiếu sự cạnh tranh với những thiên tài khác. Thế giới trong tác phẩm rộng lớn, không tù túng khó chịu. Nếu các đạo hữu thích thể loại huyền huyễn với phong cách độc đáo thì đây chính xác là món ăn tinh thần đúng gu của bạn rồi.<br> Ps: bộ này đưa tác giả Tối Bạch Địch Ô Nha ẵm danh hiệu đệ nhất tân nhân Vương năm 2023.<br><br> <a href='https://www.youtube.com/playlist?list=PLZ8In7gmihIZ9OtwPfBEWgqu044Zynr8w' target='_blank'>Tạ Hói Audio Youtube playlist</a>.",
+  "parts": [
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 1",
+      "dur": "1:20:11",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2a12186fe343d463411c0ce21c58ac83.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 2",
+      "dur": "53:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d463ce791442ea06fd2692c868962d72.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 3",
+      "dur": "39:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6a791befaa02b3fb1f67d7a3477e41e1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 4",
+      "dur": "44:25",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/Vt4CnTEEg3M9O~4xiJ280g==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 5",
+      "dur": "38:14",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/%2BEHtgtAQgJOgR9%2BSQvny0Q==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 6",
+      "dur": "40:06",
+      "url": [
+        "https://archive.org/download/abhtt--17590/20e9a6dbd6cd408e3e69fe6f06bdda1a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 7",
+      "dur": "43:05",
+      "url": [
+        "https://archive.org/download/abhtt--17590/30b3e48f86b681cd0e26b5e480b185c4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 8",
+      "dur": "38:12",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a307fe3eac96e40cb93c2a78ad5decd3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 9",
+      "dur": "41:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/40c7455463d3908e619b04927d2d15f8.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 10",
+      "dur": "41:43",
+      "url": [
+        "https://archive.org/download/abhtt--17590/8a230bbfa0cb2e37d0c72a466e4cabbc.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 11",
+      "dur": "49:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/e0de3438e061fe0cf216e1ae08bd1643.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 12",
+      "dur": "43:05",
+      "url": [
+        "https://archive.org/download/abhtt--17590/57163ee743917c8e099f61f4c6deba97.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 13",
+      "dur": "44:00",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/~mn~qFyAVkhBzkvQuEoZtw==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 14",
+      "dur": "37:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/63fbceaff3c2f7671e8d4fb7ee957a8e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 15",
+      "dur": "42:20",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eebb4d1b8aa3ce7cb2dc300a56163124.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 16",
+      "dur": "36:36",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f2f15b93b746b312c9599910be1af2b1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 17",
+      "dur": "37:26",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d430bd641521cc622e03e588d8fb422b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 18",
+      "dur": "40:38",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/RmOaBzX4cx6N8%2BAdPV1ZSQ==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 19",
+      "dur": "44:08",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/r1simDfDizERDOLjhpCj9g==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 20",
+      "dur": "44:03",
+      "url": [
+        "https://archive.org/download/abhtt--17590/18461020d732b375f3e7f02fc19a5cd1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 21",
+      "dur": "44:00",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/uYIZgWuIUw87G67QtBdcZQ==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 22",
+      "dur": "35:20",
+      "url": [
+        "https://archive.org/download/abhtt--17590/501bac72e9a2da9f97220578cae9d712.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 23",
+      "dur": "40:28",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/EAi%2BRHqbhCEkUuVZ0JIWDA==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 24",
+      "dur": "45:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f43787913c0e10057255604c0df73e79.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 25",
+      "dur": "39:50",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/QuzsKZv3kBLuNPs9IBOEdw==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 26",
+      "dur": "38:37",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ccd58179705665374ace3412e2f4142f.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 27",
+      "dur": "39:36",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/M6wcgkXYQCsa3YeskRIJOg==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 28",
+      "dur": "40:17",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/hdTp2~r2T3dNyza6y2ujwA==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 29",
+      "dur": "39:13",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/RpZ3HmFBtWzIusXDpD6cpw==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 30",
+      "dur": "39:29",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/nlWllhLof5iIDGzb56FJmA==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 31",
+      "dur": "44:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f1e5de64a5f1c19db0e91c8dcebc6d85.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 32",
+      "dur": "38:14",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4a1178c9d9de5f9734dc3369c7325345.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 33",
+      "dur": "36:26",
+      "url": [
+        "https://archive.org/download/abhtt--17590/cb94b7ba26c9ce8c2e7942b43090aaa3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 34",
+      "dur": "42:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/dbdabf637cd914f066ed06003f57473e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 35",
+      "dur": "36:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/bd0384b28bfd3808fe6d9b0ea11aef54.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 36",
+      "dur": "42:41",
+      "url": [
+        "https://archive.org/download/abhtt--17590/dcbf51dc37613f81281c5bf6aa164d43.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 37",
+      "dur": "38:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/70a6614b37ce1b89c2ebb04db5c0d104.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 38",
+      "dur": "37:04",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2bddc143cf8176a39d67e24754699750.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 39",
+      "dur": "41:57",
+      "url": [
+        "https://archive.org/download/abhtt--17590/bc7e923b2328b007a5b2fe593487a227.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 40",
+      "dur": "42:36",
+      "url": [
+        "https://archive.org/download/abhtt--17590/70071c47fd9b701573e19bbedaa3c933.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 41",
+      "dur": "38:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fb2f0d75fadc921f9db42002fb82ff13.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 42",
+      "dur": "39:20",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1dedd0a2c60123b8bf90e7dd587604b4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 43",
+      "dur": "38:49",
+      "url": [
+        "https://archive.org/download/abhtt--17590/b42a0588bc0d200e0c525631d2348f4f.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 44",
+      "dur": "39:09",
+      "url": [
+        "https://archive.org/download/abhtt--17590/82bd1a9be61d339ff74992cdaa4f8711.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 45",
+      "dur": "39:17",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c42c30ddc54b740d1c640d69f1081c19.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 46",
+      "dur": "40:06",
+      "url": [
+        "https://archive.org/download/abhtt--17590/854c9d8833024ba167da9a92af49e015.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 47",
+      "dur": "36:34",
+      "url": [
+        "https://archive.org/download/abhtt--17590/8fd805fb54b1d7398cc9f063c978f308.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 48",
+      "dur": "41:14",
+      "url": [
+        "https://archive.org/download/abhtt--17590/8e0e527ac3a5ab34263c26ecc124cb5b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 49",
+      "dur": "36:39",
+      "url": [
+        "https://archive.org/download/abhtt--17590/992fd302506a0f571c5c2ba021c39260.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 50",
+      "dur": "37:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c01cbc7c6d5190e3a9f33e5afaa04ecd.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 51",
+      "dur": "38:12",
+      "url": [
+        "https://archive.org/download/abhtt--17590/29a341f3e7dd4af1e9801a0a062eaf59.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 52",
+      "dur": "37:05",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5065f85b7a5254f5e3b660a9e7f447ba.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 53",
+      "dur": "39:42",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6db1a1f7eef8e6490ab710f3b42f1418.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 54",
+      "dur": "38:45",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c2bc19c51c9af03ae202c9247eacea23.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 55",
+      "dur": "40:40",
+      "url": [
+        "https://archive.org/download/abhtt--17590/534a94ba8a4949bf4bab83209091503f.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 56",
+      "dur": "37:19",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ec56369c3fbbdbbd1d043914578add2d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 57",
+      "dur": "35:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/e725c6207631eff9a1b7ac50ca183354.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 58",
+      "dur": "36:20",
+      "url": [
+        "https://archive.org/download/abhtt--17590/aab7af0b1ef712ab7dec80759b804280.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 59",
+      "dur": "38:25",
+      "url": [
+        "https://archive.org/download/abhtt--17590/b2de2821464261a5eb14e38c402cb4df.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 60",
+      "dur": "36:08",
+      "url": [
+        "https://archive.org/download/abhtt--17590/cb35fb4ede97f4086ef2fdb621578203.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 61",
+      "dur": "33:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/cb966660226febeb9eb3d1993e10f2c3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 62",
+      "dur": "36:40",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c7149af4dd33f6d77c41299f81714dec.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 63",
+      "dur": "37:11",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0ecc43183e08e9a3e8ec362196614fb0.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 64",
+      "dur": "34:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/77ba49b81221e4f10de4c4a8abe5a53d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 65",
+      "dur": "40:25",
+      "url": [
+        "https://files.radiotruyen.me/14187--abht/29lw~apbFpx9rTVjiPuq%2BQ==.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 66",
+      "dur": "36:45",
+      "url": [
+        "https://archive.org/download/abhtt--17590/217165b2239c67e643e3fed090dd0fc2.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 67",
+      "dur": "38:21",
+      "url": [
+        "https://archive.org/download/abhtt--17590/340e014457290a096ccb9ad19e281b6a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 68",
+      "dur": "35:54",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fe5d513f57f0f164711dce60e9757ffd.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 69",
+      "dur": "35:03",
+      "url": [
+        "https://archive.org/download/abhtt--17590/14fbb42bc0b7ea63357c66b00399a56a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 70",
+      "dur": "38:18",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f5f09f6ba0a64b7706f2465597ef50d4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 71",
+      "dur": "38:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2efbf252715027dd0884039f846e3b2e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 72",
+      "dur": "40:51",
+      "url": [
+        "https://archive.org/download/abhtt--17590/93948cf2b33868da99b0ce50bf43412a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 73",
+      "dur": "35:49",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c67db5d638b5d3f0035f05b126cf3e6b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 74",
+      "dur": "40:01",
+      "url": [
+        "https://archive.org/download/abhtt--17590/305fe7680956e0e8c322afe09b8bc42a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 75",
+      "dur": "39:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2c633db3805d57e195283b96ae3dd2f1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 76",
+      "dur": "37:02",
+      "url": [
+        "https://archive.org/download/abhtt--17590/543eb6b0dc3df3d1e0dc97e8fe9cb11b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 77",
+      "dur": "37:18",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4f3abb26a792c162bdb8a7bbfbb16cce.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 78",
+      "dur": "37:41",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6a9573b19d477eed38a97eaf61a259bb.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 79",
+      "dur": "33:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0017b8a15e3fe08a58087c793364bc9c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 80",
+      "dur": "40:21",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7cd4b30bd655dc89b90a7f699dc42697.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 81",
+      "dur": "43:56",
+      "url": [
+        "https://archive.org/download/abhtt--17590/9eab5e32cbd6413636d6c50e3bd7c29b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 82",
+      "dur": "40:36",
+      "url": [
+        "https://archive.org/download/abhtt--17590/046d4c4478cea75fb4d0c0a6d9dc13ef.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 83",
+      "dur": "38:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3501988b79d8d0b24d82a26928b29297.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 84",
+      "dur": "39:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4023f0a157f87b2662db738166d8bee7.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 85",
+      "dur": "38:56",
+      "url": [
+        "https://archive.org/download/abhtt--17590/180344f267d159f5940d8fd16638b8c6.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 86",
+      "dur": "37:34",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3716812b0376759acd05a75089ea3886.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 87",
+      "dur": "38:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a3264873505e971859d36093dc6cf337.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 88",
+      "dur": "39:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/50a7c3db07e57bc09fb260b653f8846e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 89",
+      "dur": "40:14",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a6c1f8b41798c6842fe3e3c73434b852.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 90",
+      "dur": "36:40",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7723300e519c8fe84b053a89abbe0b36.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 91",
+      "dur": "38:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c0d4376ac0fe66c33ea6a71c4b9a66be.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 92",
+      "dur": "38:53",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5e4aa16965e03a25205dbc24a88f8cb5.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 93",
+      "dur": "38:11",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7950c8c7f9c1044b249413ef3fcadf8c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 94",
+      "dur": "38:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/71e21404c4d628a7353e4542ddf66a19.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 95",
+      "dur": "43:33",
+      "url": [
+        "https://archive.org/download/abhtt--17590/b61ccb5e7034b68b11eaa9edb09debaf.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 96",
+      "dur": "43:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d2b889015600f7ab1d1a275534498bbb.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 97",
+      "dur": "44:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/086ec724bf1cb2c50c04690c97cef69b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 98",
+      "dur": "34:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f5fd79b9d6236d340cec37f85d5932c2.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 99",
+      "dur": "36:25",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fbf2aaa3b0abdf3184a9729f0afbe941.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 100",
+      "dur": "39:46",
+      "url": [
+        "https://archive.org/download/abhtt--17590/76c1a6da603b21692f72eaaf808da14a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 101",
+      "dur": "39:08",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c3706ffc2fe67cd87fd512f7bcac21c3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 102",
+      "dur": "38:27",
+      "url": [
+        "https://archive.org/download/abhtt--17590/89447fb7aa881767b2c1f98f0ab71c82.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 103",
+      "dur": "35:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2b7c506048f66f094867ff2fc0e975e6.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 104",
+      "dur": "39:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2d609956f5ece13251abca49a85359f8.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 105",
+      "dur": "40:04",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1bf3d3d6dceb00308a3f0ec0aaa14071.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 106",
+      "dur": "38:26",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f28f9ee41ab19badef1ebf0e3ca129fe.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 107",
+      "dur": "41:22",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0739bd8fa8d18ddf53c19f7970377bd4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 108",
+      "dur": "39:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c64c56a0b55427a4ceb069f3e53e161a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 109",
+      "dur": "35:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fa00f92f57de1c015b03eff0db81e9a3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 110",
+      "dur": "40:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c0f293392b7cc2fe5987b00181217151.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 111",
+      "dur": "34:27",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a57bebfe32c7841d7aa23aea906d2fdb.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 112",
+      "dur": "35:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/927ea8747648d5a7d55ceda620fa553d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 113",
+      "dur": "34:50",
+      "url": [
+        "https://archive.org/download/abhtt--17590/57bdcd956594249fe16b7d43f539f6fe.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 114",
+      "dur": "39:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/cbb447f81443c61ba3c315a6c0edfc53.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 115",
+      "dur": "35:53",
+      "url": [
+        "https://archive.org/download/abhtt--17590/79ce63b0cbcd2e66eb0bd5196500d030.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 116",
+      "dur": "38:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2a4c83dc63c928bd96dedebf2df549fe.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 117",
+      "dur": "42:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/81e09cc4e23386b1cc08c1ebb3ed2c64.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 118",
+      "dur": "36:08",
+      "url": [
+        "https://archive.org/download/abhtt--17590/bd2864ec922632d629b97484641d9cfe.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 119",
+      "dur": "34:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fc606cc7862c7a6d8aebe720842bde71.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 120",
+      "dur": "41:50",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5609325bee74e95002574e384ff47b7d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 121",
+      "dur": "40:48",
+      "url": [
+        "https://archive.org/download/abhtt--17590/18cc31346192d9e0d0112357f1e7ac95.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 122",
+      "dur": "37:39",
+      "url": [
+        "https://archive.org/download/abhtt--17590/94b2bfdc85f590cf39572a8b099d5264.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 123",
+      "dur": "42:18",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4e800718d67165f73c2eff7dfb4d33b3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 124",
+      "dur": "41:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/721fae6970daaa991ac6d30b54c96e5d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 125",
+      "dur": "35:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/41e3645c7ed93112cb8ce5b8eb83d032.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 126",
+      "dur": "36:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/15276b176376d8d1dc13367d8d227e39.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 127",
+      "dur": "35:41",
+      "url": [
+        "https://archive.org/download/abhtt--17590/bd946099e568c588fd9f8efa98bd9c7e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 128",
+      "dur": "33:51",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eb8ea84c719a4f612ad05aea91d26e54.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 129",
+      "dur": "40:35",
+      "url": [
+        "https://archive.org/download/abhtt--17590/25aaebd302f3a1aab8310d704bc8af6b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 130",
+      "dur": "40:58",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f4584481a96abda6ffbcccbc03d718d9.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 131",
+      "dur": "40:42",
+      "url": [
+        "https://archive.org/download/abhtt--17590/9f2fa8b056f6a9ea26b482e662066df3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 132",
+      "dur": "34:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/74c00bc7c661049c56aa798c84be6d26.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 133",
+      "dur": "34:11",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5818c65ca49e0a6e751205949fd139eb.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 134",
+      "dur": "40:37",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4863fb7a6d5eddb80a6ffd8793a6d114.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 135",
+      "dur": "35:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/10bc392070ee7acd55fd28e70f82c192.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 136",
+      "dur": "34:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0aa3eb475d24ceca6132805c146af468.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 137",
+      "dur": "38:16",
+      "url": [
+        "https://archive.org/download/abhtt--17590/588909385cb149695cd1642467127e59.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 138",
+      "dur": "39:40",
+      "url": [
+        "https://archive.org/download/abhtt--17590/39d100540aace134c4385948b51d64eb.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 139",
+      "dur": "40:09",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3b1814fb7f3158e3e1728acc99264c77.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 140",
+      "dur": "40:46",
+      "url": [
+        "https://archive.org/download/abhtt--17590/593934ea6cc9eed10db3e09f60a1bdb5.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 141",
+      "dur": "39:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/552a1ea81bb71bd40dc6492765665ce4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 142",
+      "dur": "36:20",
+      "url": [
+        "https://archive.org/download/abhtt--17590/dafefaec2770142058983e5004c0136d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 143",
+      "dur": "35:17",
+      "url": [
+        "https://archive.org/download/abhtt--17590/932126a66caddb4cc33f707cd4af4ba7.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 144",
+      "dur": "38:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1bb40241d2bba12592462d7211a3a9d9.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 145",
+      "dur": "35:47",
+      "url": [
+        "https://archive.org/download/abhtt--17590/8120f4b464e917706064d47264a0d9ae.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 146",
+      "dur": "40:56",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7aa0b40c19ed04d7ef99435201bbfbef.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 147",
+      "dur": "38:58",
+      "url": [
+        "https://archive.org/download/abhtt--17590/79f78b691aa8ba406a1ea364731f7068.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 148",
+      "dur": "37:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a07e64cdd66de9f665733c511d204b35.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 149",
+      "dur": "34:00",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1b95431232b90120852cfadd16e16ab7.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 150",
+      "dur": "41:46",
+      "url": [
+        "https://archive.org/download/abhtt--17590/307a838f523ff4963ff3d9436b04be90.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 151",
+      "dur": "39:03",
+      "url": [
+        "https://archive.org/download/abhtt--17590/9b65f1e9eb5c4295de5a534c2114c193.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 152",
+      "dur": "37:34",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3a2b0530707e66652f815f095adaf42d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 153",
+      "dur": "41:19",
+      "url": [
+        "https://archive.org/download/abhtt--17590/07673807a624d01fe15ee600b2e460f5.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 154",
+      "dur": "41:37",
+      "url": [
+        "https://archive.org/download/abhtt--17590/60cf42f45e5933cf3fe8532e27c46c55.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 155",
+      "dur": "39:32",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6e66c2da270a877c23782c435b035d11.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 156",
+      "dur": "38:07",
+      "url": [
+        "https://archive.org/download/abhtt--17590/dd737efd5efb20abfacb84ca9764caf2.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 157",
+      "dur": "41:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f6b13822dbba2e4d89e4a382f6e4a167.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 158",
+      "dur": "35:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/dc93a9f14af09fd907774f17a72a1177.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 159",
+      "dur": "35:58",
+      "url": [
+        "https://archive.org/download/abhtt--17590/9ea62918a862da7aad7dc31a652e7821.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 160",
+      "dur": "37:25",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5d26b04822590d91d30d1202c321842c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 161",
+      "dur": "42:03",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4e545c122ed45ff861e9a2dcbc2a78a0.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 162",
+      "dur": "41:12",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d0995aeca329ab6cc7485c33db3ee03b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 163",
+      "dur": "42:45",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ee1b6437cf2299b58edb09d4126eb67f.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 164",
+      "dur": "38:26",
+      "url": [
+        "https://archive.org/download/abhtt--17590/b7b296f6a8b6795e90a8e6f8f32c31a9.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 165",
+      "dur": "34:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7ff0a3a6fa67c9bc8cecb50e55c17dc8.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 166",
+      "dur": "37:35",
+      "url": [
+        "https://archive.org/download/abhtt--17590/99b20c302a3816b1365f7ee79fe0c5a5.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 167",
+      "dur": "32:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eb8c81ae9c5126732b7041676be34aa3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 168",
+      "dur": "39:50",
+      "url": [
+        "https://archive.org/download/abhtt--17590/5a8383c648671c0eb5cbd9edd013818b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 169",
+      "dur": "42:48",
+      "url": [
+        "https://archive.org/download/abhtt--17590/26333405d2b522f9193e200838d693c2.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 170",
+      "dur": "40:09",
+      "url": [
+        "https://archive.org/download/abhtt--17590/abc344664ba5d4159a8e905fa7ab1950.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 171",
+      "dur": "39:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/bb81579b5ff0d984342807058c266291.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 172",
+      "dur": "40:22",
+      "url": [
+        "https://archive.org/download/abhtt--17590/84c409bf661b59cefe37b1534171d55b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 173",
+      "dur": "41:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/984a5a018eff3934fef87815b30bcb67.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 174",
+      "dur": "35:10",
+      "url": [
+        "https://archive.org/download/abhtt--17590/865a6ab56a2ace9e20131fb602251dec.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 175",
+      "dur": "38:01",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0735a33f1d04f1c2f79608b31a7f3747.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 176",
+      "dur": "42:14",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3158dfe4f519d75a5e37580a12928571.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 177",
+      "dur": "33:36",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0c4f2515ad9af61d24dfcfade6dd5e3c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 178",
+      "dur": "38:57",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0839dd2fade72b17807aba5539ff2f1c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 179",
+      "dur": "42:01",
+      "url": [
+        "https://archive.org/download/abhtt--17590/cb764cfec8eb46bb12791ae6c034f52b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 180",
+      "dur": "34:34",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d3c944ec881eae59517763b85dc0caa2.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 181",
+      "dur": "41:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/be6a75ce76dd6b4717aa54374cc3f021.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 182",
+      "dur": "35:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ab6082ee9ca6aeab5e10631a7c05682c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 183",
+      "dur": "50:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c018b29844a6aeb8bedfc880570dfb83.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 184",
+      "dur": "38:18",
+      "url": [
+        "https://archive.org/download/abhtt--17590/03f7ddc40c3bc674ddd94d53dab82cca.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 185",
+      "dur": "38:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4fc51d6b28a51d04d9ca70e05283146e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 186",
+      "dur": "36:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/32412b6ba1d32d48901716b3571685a1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 187",
+      "dur": "36:21",
+      "url": [
+        "https://archive.org/download/abhtt--17590/67b14a29c60baf1bfcb5527013e3565b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 188",
+      "dur": "32:46",
+      "url": [
+        "https://archive.org/download/abhtt--17590/20f94d4c9a91804608088228212e2071.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 189",
+      "dur": "35:04",
+      "url": [
+        "https://archive.org/download/abhtt--17590/149a8046548f73f3d34eeced1b046f5a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 190",
+      "dur": "39:49",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6b69f5ad53720f7b05c80d7068b1eb26.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 191",
+      "dur": "32:03",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2ac080c5dfd7598ad9adf1cfaaad4495.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 192",
+      "dur": "37:43",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eae05a44409200c8639a9b34d06379ca.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 193",
+      "dur": "34:36",
+      "url": [
+        "https://archive.org/download/abhtt--17590/e9e52a12cf8d5d021a1ce757a3469703.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 194",
+      "dur": "37:44",
+      "url": [
+        "https://archive.org/download/abhtt--17590/56428e93c233a2b49c39e1d44646fdd1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 195",
+      "dur": "37:42",
+      "url": [
+        "https://archive.org/download/abhtt--17590/4129647313e445d1da85acbaaccfec9b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 196",
+      "dur": "35:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/647390f5fd2851e73d20d3ce15599281.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 197",
+      "dur": "39:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/522c617471304235e11fca2ccf25b6d9.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 198",
+      "dur": "36:48",
+      "url": [
+        "https://archive.org/download/abhtt--17590/40702b7d99661d44ce885e3194836b02.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 199",
+      "dur": "40:09",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7d04485f444554411d848bdbbe89c64d.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 200",
+      "dur": "30:46",
+      "url": [
+        "https://archive.org/download/abhtt--17590/46b8209fbe847a7bdc619897bacd4cab.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 201",
+      "dur": "38:24",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0c7c5e3475c40c33cb3fa53a8075d4ab.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 202",
+      "dur": "42:19",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a4ff6ce2ffdf79e910054f6614607e26.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 203",
+      "dur": "40:05",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ef7c2513f041b3c420589d651e7e72f7.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 204",
+      "dur": "36:29",
+      "url": [
+        "https://archive.org/download/abhtt--17590/85d46882dbffd6680b2bbe87ffcdbfe1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 205",
+      "dur": "36:56",
+      "url": [
+        "https://archive.org/download/abhtt--17590/f08b5f206109bae471d2afa0d0b36bcf.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 206",
+      "dur": "36:59",
+      "url": [
+        "https://archive.org/download/abhtt--17590/269a55700d91cbe92d368546757ee5a3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 207",
+      "dur": "38:27",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a68bb1e754da5d0516b4f1f08f6d18ef.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 208",
+      "dur": "37:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0f6e5e460aaae47900e7d3521face856.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 209",
+      "dur": "44:50",
+      "url": [
+        "https://archive.org/download/abhtt--17590/805b2dd388f8b7f7fb69e1c8204c84d0.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 210",
+      "dur": "42:27",
+      "url": [
+        "https://archive.org/download/abhtt--17590/931469858f48eb17eaf869f9f337ca66.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 211",
+      "dur": "37:04",
+      "url": [
+        "https://archive.org/download/abhtt--17590/d06137bfc64cd8e5e1ab2f259b8b35c7.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 212",
+      "dur": "38:58",
+      "url": [
+        "https://archive.org/download/abhtt--17590/b91e48e4178b67f02c77fc2e756f8e90.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 213",
+      "dur": "37:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c17c29b35c998b59d9a49005e8cb158a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 214",
+      "dur": "42:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/be7fa110e9245d7aae9f1e570d5b1a98.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 215",
+      "dur": "39:00",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fc29723d39325aa368917ce3db95c56e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 216",
+      "dur": "37:00",
+      "url": [
+        "https://archive.org/download/abhtt--17590/07cbbdacfdac646963cedebbb4568a31.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 217",
+      "dur": "41:53",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c4d253b41fd6bb43cd3741a5cbc41af3.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 218",
+      "dur": "41:01",
+      "url": [
+        "https://archive.org/download/abhtt--17590/e0040e9aa83000f5b3cfca0691ca6ac4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 219",
+      "dur": "38:57",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3de70b919fd9df459e6afca2ef906181.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 220",
+      "dur": "37:28",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eb127fd74e0d43ba3e64c23782ffcd85.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 221",
+      "dur": "43:53",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0758fb6257076e88c3b61b17182d4505.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 222",
+      "dur": "54:37",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2ec663cde80a4647f883363c59846aaf.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 223",
+      "dur": "40:42",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c6b8e85f0c27ac98de6498af25a86b68.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 224",
+      "dur": "40:33",
+      "url": [
+        "https://archive.org/download/abhtt--17590/84d821cc71e24cca8e4dbd79db9295aa.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 225",
+      "dur": "44:55",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a36e6babfc8afbf28e245dfad9daef6b.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 226",
+      "dur": "43:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/e7614db6277cb7018204f629a0c67a28.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 227",
+      "dur": "36:25",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eab6504cbdc7e061b2353f2100b3246c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 228",
+      "dur": "42:32",
+      "url": [
+        "https://archive.org/download/abhtt--17590/db99d06cf59ff7910be82f2f95b86b6e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 229",
+      "dur": "41:45",
+      "url": [
+        "https://archive.org/download/abhtt--17590/ba79f0056c5163bd98cc6c699d29c572.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 230",
+      "dur": "41:13",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3354ca75f2b4e57d2a304fa24e10f130.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 231",
+      "dur": "43:38",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0570663a663979837b6681a0704ce1e4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 232",
+      "dur": "45:02",
+      "url": [
+        "https://archive.org/download/abhtt--17590/eab977d912d8c2cea413fba3fa45f00c.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 233",
+      "dur": "41:33",
+      "url": [
+        "https://archive.org/download/abhtt--17590/55a5a0757514f900619cbb79f5b35245.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 234",
+      "dur": "51:27",
+      "url": [
+        "https://archive.org/download/abhtt--17590/db5e2efafcb8751fa4a86ea9efd745f0.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 235",
+      "dur": "42:34",
+      "url": [
+        "https://archive.org/download/abhtt--17590/7e54fc827fe6bc8bf5c04732baf46c62.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 236",
+      "dur": "47:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/fcc74ebf414f7c3b1267660d1eb4d418.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 237",
+      "dur": "45:21",
+      "url": [
+        "https://archive.org/download/abhtt--17590/3c996825cfcc63638b4a6706b6f002b8.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 238",
+      "dur": "41:33",
+      "url": [
+        "https://archive.org/download/abhtt--17590/2069cc78271e60231930f19432e4ef7a.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 239",
+      "dur": "41:18",
+      "url": [
+        "https://archive.org/download/abhtt--17590/220e365890a2dd8d035f4046e7b52ee0.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 240",
+      "dur": "46:15",
+      "url": [
+        "https://archive.org/download/abhtt--17590/608560306fad080cee241da57c74485e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 241",
+      "dur": "51:52",
+      "url": [
+        "https://archive.org/download/abhtt--17590/532d89f2feddbe51c690e61e8421a9a1.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 242",
+      "dur": "40:56",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1ea100d0f0add8510f509c23301ac41e.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 243",
+      "dur": "42:47",
+      "url": [
+        "https://archive.org/download/abhtt--17590/6a9a481dc2d44547cb5cd52c06b07e92.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 244",
+      "dur": "37:01",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1b6525aa4abb0c8eb536a33c6f0e30a4.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 245",
+      "dur": "46:44",
+      "url": [
+        "https://archive.org/download/abhtt--17590/c338c9df1bb4dde2ca8fe850d374df03.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 246",
+      "dur": "47:07",
+      "url": [
+        "https://archive.org/download/abhtt--17590/a739d5d45689bf126473a03103ecc7dc.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 247",
+      "dur": "47:50",
+      "url": [
+        "https://archive.org/download/abhtt--17590/1309e041ca7224af5877626834bb2364.mp3"
+      ]
+    },
+    {
+      "tit": "Ai Bảo Hắn Tu Tiên - Tập 248",
+      "dur": "1:03:23",
+      "url": [
+        "https://archive.org/download/abhtt--17590/0ce9519bd5c0996ae3ad7db47a8eacc2.mp3"
+      ]
+    }
+  ]
+}
