@@ -145,20 +145,20 @@ add STT back:  `.parts[i] = Object.assign({stt: i+1}, .parts[i]) `
 
 --------  
 #### Add subtit from TOC:
+
+First, paste following supported function into `Developer Tool`:
 ```javascript
-function extractChapterAndRange(str) {
-    
+function extractChapterAndRange(str) {    
 	const chapter = str.match(/Tập (\d+)/);  // "03"
 	const range = str.match(/\d+\s*-\s*\d+/);    // "12-18"
 	
 	if(!chapter || !range) console.warn(str);
-	return { c: (chapter?chapter[1]:null), r: (range?range[0]:null) };
-    
+	return { c: (chapter?chapter[1]:null), r: (range?range[0]:null) };    
 }
 ```
 
-`c` to keep original "parts" array of the books. In `c`, each item has `tit` attribute looks like `Tập 235 (Chương 1276-1281)`.  
-`m` to keep the TOC of the book, each chapter in one line
+`c` to keep original `parts` array of the books. In `c`, each item has `tit` attribute looks like `Tập 235 (Chương 1276-1281)`.  
+`m` to keep the TOC of the book, each chapter in one line.
 
 ```javascript
 c.forEach( t => { k= extractChapterAndRange(t.tit); r = k.r.split("-").map(Number); t.sTit = m.slice(r[0]-1, r[1]).map(x => x.replace("Chương ","")).join("; ") } ); copy(c)
@@ -168,8 +168,8 @@ c.forEach( t => { k= extractChapterAndRange(t.tit); r = k.r.split("-").map(Numbe
 
 ### Nhat-truyen
 get nhat truyen (https://nhattruyen.one/) media playlist
-- Chọn một li trong playlist, chuột phải --> 'break on' --> 'attribute modifications'.
-- Bấm vào mục tương ứng với li đó trong playlist, Developer Tool sẽ break.
+- Chọn một `<li>` trong playlist, chuột phải --> `break on` --> `attribute modifications`.
+- Bấm vào mục tương ứng với li đó trong playlist, `Developer Tool` sẽ break.
 - Trong 'Call Stack', tìm đến caller 'play', trong file js sẽ có lệnh 'this.playlist', lệnh này sẽ cho full playlist
 
 Hoặc trong file jplayer.playlist.min.js tìm 'play:', đặt break, play 1 chương bất kỳ để dừng code
