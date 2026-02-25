@@ -144,6 +144,27 @@ x = data_2.ach_Data; x.books.forEach(b => b.parts.forEach(p => {if(p.hasOwnPrope
 add STT back:  `.parts[i] = Object.assign({stt: i+1}, .parts[i]) `
 
 --------  
+#### Add subtit from TOC:
+```javascript
+function extractChapterAndRange(str) {
+    
+	const chapter = str.match(/Tập (\d+)/);  // "03"
+	const range = str.match(/\d+\s*-\s*\d+/);    // "12-18"
+	
+	if(!chapter || !range) console.warn(str);
+	return { c: (chapter?chapter[1]:null), r: (range?range[0]:null) };
+    
+}
+```
+
+`c` to keep original "parts" array of the books. In `c`, each item has `tit` attribute looks like `Tập 235 (Chương 1276-1281)`.  
+`m` to keep the TOC of the book, each chapter in one line
+
+```javascript
+c.forEach( t => { k= extractChapterAndRange(t.tit); r = k.r.split("-").map(Number); t.sTit = m.slice(r[0]-1, r[1]).map(x => x.replace("Chương ","")).join("; ") } ); copy(c)
+```
+
+--------  
 
 ### Nhat-truyen
 get nhat truyen (https://nhattruyen.one/) media playlist
