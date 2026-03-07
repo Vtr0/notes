@@ -1,4 +1,4 @@
-# pip install requests pillow BeautifulSoup
+# pip install requests pillow beautifulsoup4
 import os
 import shutil
 import requests
