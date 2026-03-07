@@ -54,14 +54,24 @@ def extract_image_urls():
     print("Total images found:", len(image_urls))
     return image_urls
 
+def progress(i, total):
+    percent = i / total
+    bar_length = 40
+
+    filled = int(bar_length * percent)
+    bar = "#" * filled + "-" * (bar_length - filled)
+
+    print(f"\r[{bar}] {i}/{total} - {percent*100:5.1f}% ", end="")
 
 def download_images(image_urls):
     print("\nDownloading images...")
 
     files = []
 
+    img_len = len(image_urls)
     for i, url in enumerate(image_urls):
-        print(f"Downloading {i+1}/{len(image_urls)}")
+        #print(f"Downloading {i+1}/{len(image_urls)}")
+        progress(i+1, img_len)
 
         r = requests.get(url, headers=HEADERS)
 
@@ -76,7 +86,7 @@ def download_images(image_urls):
 
 
 def create_pdf(files):
-    print("\nCreating PDF...")
+    print("\n\nCreating PDF...")
 
     images = []
 
@@ -115,10 +125,8 @@ def main():
     create_pdf(files)
     delete_images()
 
-
 if __name__ == "__main__":
-    main()
-
+    main()    
 
 
 '''
