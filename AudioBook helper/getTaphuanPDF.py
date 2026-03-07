@@ -1,6 +1,7 @@
 # pip install requests pillow beautifulsoup4
 import os
 import shutil
+import time
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
@@ -54,7 +55,8 @@ def extract_image_urls():
     print("Total images found:", len(image_urls))
     return image_urls
 
-def progress(i, total):
+""" Simple progress bar. """
+def progress1(i, total):
     percent = i / total
     bar_length = 40
 
@@ -62,6 +64,23 @@ def progress(i, total):
     bar = "#" * filled + "-" * (bar_length - filled)
 
     print(f"\r[{bar}] {i}/{total} - {percent*100:5.1f}% ", end="")
+
+""" Improved progress bar with percentage in the middle. """
+def progress(i, total):
+    percent = i / total
+    bar_length = 40
+
+    filled = int(bar_length * percent)
+    fPercentage = f" {percent*100:5.1f}% "
+    half_bar = bar_length // 2
+
+    # bar = "#" * filled + "-" * (bar_length - filled)
+    if(percent < 0.5):
+        bar = "#" * filled + "-" * (half_bar - filled) + fPercentage + "-" * half_bar
+    else:
+        bar = "#" * half_bar + fPercentage + "#" * (filled - half_bar) + "-" * (bar_length - filled)
+
+    print(f"\r[{bar}] {i}/{total} ", end="")
 
 def download_images(image_urls):
     print("\nDownloading images...")
@@ -116,7 +135,6 @@ def delete_images():
     else:
         print("Template Images kept.")
 
-
 def main():
     urls = extract_image_urls()
 
@@ -129,8 +147,20 @@ def main():
     delete_images()
 
 if __name__ == "__main__":
-    main()    
+    main()
+    
+    """ 
+    import time
+    for p in range(101):
+        progress(p + 1, 101)
+        time.sleep(0.1)
 
+    print("\n")
+
+    for p in range(120):
+        progress(p + 1, 120)
+        time.sleep(0.1)
+    """
 
 '''
 OLM using turn.js (https://github.com/ono77/Turn.js-5/blob/master/lib/turn.js) to render book pages, so we can't get all page images by just fetching the page source, we need to run JS to get all page images.
