@@ -86,13 +86,16 @@ def download_images(image_urls):
 
 
 def create_pdf(files):
-    print("\n\nCreating PDF...")
+    print("\n\nCreating PDF...\nAdding images to PDF...")
 
     images = []
 
+    i = 1
     for f in files:
         img = Image.open(f).convert("RGB")
         images.append(img)
+        progress(i, len(files))
+        i += 1
 
     if images:
         images[0].save(
