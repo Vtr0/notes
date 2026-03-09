@@ -1,7 +1,8 @@
 # pip install requests pillow beautifulsoup4
 """ Minified version of getTaphuanPDF.py, for fun and to make it harder to read. 
-    install pyminifier: `pip install pyminifier3`
-    run code: `pyminifier --replacement-length=1 --remove-literal-statements --obfuscate-builtins --obfuscate-functions --outfile=min.py getTaphuanPDF.py`
+    - install pyminifier: `pip install pyminifier3`
+    - run code: `pyminifier --replacement-length=1 -O --outfile=min.py getTaphuanPDF.py`
+    - fix min.py: always error at `Image.N(f).convert("RGB")` replace `Image.N` (N can be something else, just looking for `convert("RGB")`) with `Image.open`
 """
 #import os
 from pathlib import Path
@@ -21,8 +22,12 @@ IMG_BASE_URL = "https://cdn3.olm.vn/" # base URL for images, in case the src is 
 def extract_image_urls(URL):
     print("\nFetching page...")
 
-    res = requests.get(URL, headers=HEADERS)
-    res.raise_for_status()
+    try:
+        res = requests.get(URL, headers=HEADERS)
+        res.raise_for_status()
+    except requests.RequestException as e:
+        print(f"\n\033[31mError fetching page: {e}.\033[0m")
+        return []
 
     soup = BeautifulSoup(res.text, "html.parser")
 
@@ -39,17 +44,6 @@ def extract_image_urls(URL):
     print("Total images found:\033[33m", len(image_urls), "\033[0m")
     return image_urls
 
-""" Simple progress bar. """
-def progress1(i, total):
-    percent = i / total
-    bar_length = 40
-
-    filled = int(bar_length * percent)
-    bar = "#" * filled + "-" * (bar_length - filled)
-
-    print(f"\r[{bar}] {i}/{total} - {percent*100:5.1f}% ", end="")
-    
-
 """ Improved progress bar with percentage in the middle. """
 def progress(i, total):
     percent = i / total
@@ -65,10 +59,7 @@ def progress(i, total):
     else:
         bar = "#" * half_bar + fPercentage + "#" * (filled - half_bar) + "-" * (bar_length - filled)
 
-    GREEN = "\033[32m"
-    RESET = "\033[0m"
-
-    print(f"{GREEN}\r[{bar}] {i}/{total} {RESET}", end="")
+    print(f"\033[32m\r[{bar}] {i}/{total} \033[0m", end="")
     #print(f"\r[{bar}] {i}/{total} ", end="")
 
 def download_images(image_urls, IMAGE_DIR):
@@ -81,7 +72,12 @@ def download_images(image_urls, IMAGE_DIR):
         #print(f"Downloading {i+1}/{len(image_urls)}")
         progress(i+1, img_len)
 
-        r = requests.get(url, headers=HEADERS)
+        try:
+            r = requests.get(url, headers=HEADERS)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            print(f"\nError downloading image {i+1}: \033[31m{e}.\033[0m")
+            return []
 
         filename = IMAGE_DIR / f"{i:03}.jpg" # os.path.join(IMAGE_DIR, f"{i:03}.jpg")
 
