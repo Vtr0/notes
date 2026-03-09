@@ -1,38 +1,24 @@
 # pip install requests pillow beautifulsoup4
-import os
+""" Minified version of getTaphuanPDF.py, for fun and to make it harder to read. 
+    install pyminifier: `pip install pyminifier3`
+    run code: `pyminifier --replacement-length=1 --remove-literal-statements --obfuscate-builtins --obfuscate-functions --outfile=min.py getTaphuanPDF.py`
+"""
+#import os
+from pathlib import Path
 import shutil
-import time
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from PIL import Image
 
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+# Set headers to mimic a browser, some servers may block requests with default Python user-agent
+HEADERS = {"User-Agent": "Mozilla/5.0",
+            "Referer": "https://taphuan.olm.vn/" # some images may require Referer header to be set to the main page URL, otherwise we may get 403 Forbidden error when trying to download them
+            }
 
-# -------- Get script directory --------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMG_BASE_URL = "https://cdn3.olm.vn/" # base URL for images, in case the src is a relative URL, we need to join it with this base URL
 
-# -------- Default URL --------
-DEFAULT_URL = "https://taphuan.olm.vn/tap-huan/doc-sach/shs-tieng-viet-1-tap-hai.4534568231"
-
-# -------- Ask user for URL --------
-user_input = input("Enter book URL (press Enter for default): ").strip()
-URL = user_input if user_input else DEFAULT_URL
-
-print("Using URL:", URL)
-
-# -------- Extract book name from URL --------
-path = urlparse(URL).path
-slug = os.path.basename(path)
-name = slug.split(".")[0]
-
-IMAGE_DIR = os.path.join(BASE_DIR, name)
-PDF_FILE = os.path.join(BASE_DIR, f"{name}.pdf")
-
-os.makedirs(IMAGE_DIR, exist_ok=True)
-
-
-def extract_image_urls():
+def extract_image_urls(URL):
     print("\nFetching page...")
 
     res = requests.get(URL, headers=HEADERS)
@@ -40,9 +26,7 @@ def extract_image_urls():
 
     soup = BeautifulSoup(res.text, "html.parser")
 
-    image_urls = []
-
-    IMG_BASE_URL = "https://cdn3.olm.vn/"
+    image_urls = []    
 
     for img in soup.select("#reader img"):
         src = img.get("data-src") or img.get("src") #https://cdn3.olm.vn/upload/taphuan/cf17fffe-784f-7265-9ed3-bab136ffc707-202507161352262308-1772302383981.jpg
@@ -52,7 +36,7 @@ def extract_image_urls():
     """ for i, url in enumerate(image_urls):
         print(i+1, url) """
 
-    print("Total images found:", len(image_urls))
+    print("Total images found:\033[33m", len(image_urls), "\033[0m")
     return image_urls
 
 """ Simple progress bar. """
@@ -64,6 +48,7 @@ def progress1(i, total):
     bar = "#" * filled + "-" * (bar_length - filled)
 
     print(f"\r[{bar}] {i}/{total} - {percent*100:5.1f}% ", end="")
+    
 
 """ Improved progress bar with percentage in the middle. """
 def progress(i, total):
@@ -80,9 +65,13 @@ def progress(i, total):
     else:
         bar = "#" * half_bar + fPercentage + "#" * (filled - half_bar) + "-" * (bar_length - filled)
 
-    print(f"\r[{bar}] {i}/{total} ", end="")
+    GREEN = "\033[32m"
+    RESET = "\033[0m"
 
-def download_images(image_urls):
+    print(f"{GREEN}\r[{bar}] {i}/{total} {RESET}", end="")
+    #print(f"\r[{bar}] {i}/{total} ", end="")
+
+def download_images(image_urls, IMAGE_DIR):
     print("\nDownloading images...")
 
     files = []
@@ -94,7 +83,7 @@ def download_images(image_urls):
 
         r = requests.get(url, headers=HEADERS)
 
-        filename = os.path.join(IMAGE_DIR, f"{i:03}.jpg")
+        filename = IMAGE_DIR / f"{i:03}.jpg" # os.path.join(IMAGE_DIR, f"{i:03}.jpg")
 
         with open(filename, "wb") as f:
             f.write(r.content)
@@ -104,7 +93,7 @@ def download_images(image_urls):
     return files
 
 
-def create_pdf(files):
+def create_pdf(files, PDF_FILE):
     print("\n\nCreating PDF...\nAdding images to PDF...")
 
     images = []
@@ -123,28 +112,75 @@ def create_pdf(files):
             append_images=images[1:]
         )
 
-    print("\nPDF created:", PDF_FILE)
+    print("\nPDF created:\033[33m", PDF_FILE, "\033[0m")
 
 
-def delete_images():
-    choice = input("\nDelete downloaded image folder? (y/n): ").strip().lower()
-
+def delete_images(IMAGE_DIR):
+    # choice = input("\nDelete downloaded image folder? (y/n): ").strip().lower()
+    choice = "y"
     if choice == "y":
         shutil.rmtree(IMAGE_DIR)
-        print("Template Image folder deleted.")
+        print("\n\033[31mTemplate Image folder deleted.\033[0m")
     else:
-        print("Template Images kept.")
+        print("\n\033[32mTemplate Images kept.\033[0m")
 
 def main():
-    urls = extract_image_urls()
+    """ 
+    # -------- Get script directory --------
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # -------- Default URL --------
+    DEFAULT_URL = "https://taphuan.olm.vn/tap-huan/doc-sach/shs-cong-nghe-3.4538694745#page=0"
+
+    # -------- Ask user for URL --------
+    user_input = input("Enter book URL (press Enter for default): ").strip()
+    URL = user_input if user_input else DEFAULT_URL
+
+    print("Using URL:", URL)
+
+    # -------- Extract book name from URL --------
+    path = urlparse(URL).path
+    slug = os.path.basename(path)
+    name = slug.split(".")[0]
+
+    IMAGE_DIR = os.path.join(BASE_DIR, name)
+    PDF_FILE = os.path.join(BASE_DIR, f"{name}.pdf")
+
+    os.makedirs(IMAGE_DIR, exist_ok=True)
+ """
+    # -------- Get script directory --------
+    BASE_DIR = Path(__file__).resolve().parent
+
+    # -------- Default URL --------
+    DEFAULT_URL = "https://taphuan.olm.vn/tap-huan/doc-sach/shs-cong-nghe-3.4538694745#page=0"
+
+    # -------- Ask user for URL --------
+    user_input = input("Enter book URL (press Enter for default): ").strip()
+    URL = user_input if user_input else DEFAULT_URL
+
+    print("Using URL:", URL)
+
+    # -------- Extract book name from URL --------
+    path = urlparse(URL).path
+    slug = Path(path).name
+    name = slug.split(".")[0]
+
+    IMAGE_DIR = BASE_DIR / name
+    PDF_FILE = BASE_DIR / f"{name}.pdf"
+
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # -------- Extract image URLs --------
+    urls = extract_image_urls(URL)
 
     if not urls:
         print("No images found. The page may require JavaScript.")
         return
 
-    files = download_images(urls)
-    create_pdf(files)
-    delete_images()
+    # -------- Download images, create PDF, and delete images --------
+    files = download_images(urls, IMAGE_DIR)
+    create_pdf(files, PDF_FILE)
+    delete_images(IMAGE_DIR)
 
 if __name__ == "__main__":
     main()
@@ -162,7 +198,8 @@ if __name__ == "__main__":
         time.sleep(0.1)
     """
 
-'''
+
+''' Download all pages of the book manually using JS:
 OLM using turn.js (https://github.com/ono77/Turn.js-5/blob/master/lib/turn.js) to render book pages, so we can't get all page images by just fetching the page source, we need to run JS to get all page images.
 Download all pages of the book using JS:
 
