@@ -29,10 +29,10 @@ def H(i,total,additionStr=""):
  B=f" {G*100:5.1f}% "
  f=W//2
  if(G<0.5):
-  o="#"*x+"-"*(f-x)+B+"-"*f
+  o="█"*x+"░"*(f-x)+B+"░"*f
  else:
-  o="#"*f+B+"#"*(x-f)+"-"*(W-x)
- V(f"\033[32m\r[{o}] \033[36m{i:>3}/{total} \033[0m{additionStr}",end="")
+  o="█"*f+B+"█"*(x-f)+"░"*(W-x)
+ V(f"\033[32m\r|{o}| \033[36m{i:>3}/{total} \033[0m{additionStr}",end="")
 def l(L,P):
  V("\nDownloading images...")
  P.mkdir(parents=X,exist_ok=X)
@@ -85,11 +85,8 @@ def O():
  i=M("Enter book URL (press Enter for default): ").strip()
  k=i if i else I
  V("Using URL:\033[33m",k,"\033[0m")
- r=urlparse(k).path
- s=Path(r).name
- y=s.split(".")[0]
- P=U/y
- h=U/f"{y}.pdf"
+ r=urlparse(k).path;s=Path(r).name;y=s.split(".")[0]
+ P=U/y;h=U/f"{y}.pdf"
  D=z(k)
  if not D:
   V("\n\033[31mNo images found. The page may require JavaScript.\033[0m")

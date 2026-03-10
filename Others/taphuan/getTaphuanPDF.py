@@ -55,11 +55,11 @@ def progress(i, total, additionStr=""):
     half_bar = bar_length // 2
 
     if(percent < 0.5):
-        bar = "#" * filled + "-" * (half_bar - filled) + fPercentage + "-" * half_bar
+        bar = "█" * filled + "░" * (half_bar - filled) + fPercentage + "░" * half_bar
     else:
-        bar = "#" * half_bar + fPercentage + "#" * (filled - half_bar) + "-" * (bar_length - filled)
+        bar = "█" * half_bar + fPercentage + "█" * (filled - half_bar) + "░" * (bar_length - filled)
 
-    print(f"\033[32m\r[{bar}] \033[36m{i:>3}/{total} \033[0m{additionStr}", end="")
+    print(f"\033[32m\r|{bar}| \033[36m{i:>3}/{total} \033[0m{additionStr}", end="")
 
 def download_images(image_urls, IMAGE_DIR):
     print("\nDownloading images...")
