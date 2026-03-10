@@ -1,6 +1,6 @@
 from pathlib import Path
 import shutil,requests,time
-V=print;m=len;J=int;X=True;K=enumerate;b=open;M=input;j=shutil.rmtree;v=requests.RequestException;d=requests.get;C=time.perf_counter
+V=print;m=len;J=int;X=True;K=enumerate;b=open;M=input;j=shutil.rmtree;v=requests.RequestException;d=requests.get;C=time.perf_counter;gm=1024*1024
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin,urlparse
 from PIL import Image
@@ -22,17 +22,15 @@ def z(k):
    L.append(urljoin(Q,R))
  V("Total images found:\033[33m",m(L),"\033[0m")
  return L
-def H(i,total,additionStr=""):
- G=i/total
+def H(i,t,a=""):
+ G=i/t
  W=40
  x=J(W*G)
  B=f" {G*100:5.1f}% "
  f=W//2
- if(G<0.5):
-  o="█"*x+"░"*(f-x)+B+"░"*f
- else:
-  o="█"*f+B+"█"*(x-f)+"░"*(W-x)
- V(f"\033[32m\r|{o}| \033[36m{i:>3}/{total} \033[0m{additionStr}",end="")
+ if(G<0.5): o="█"*x+"░"*(f-x)+B+"░"*f
+ else: o="█"*f+B+"█"*(x-f)+"░"*(W-x)
+ V(f"\033[32m\r|{o}| \033[36m{i:>3}/{t} \033[0m{a}",end="")
 def l(L,P):
  V("\nDownloading images...")
  P.mkdir(parents=X,exist_ok=X)
@@ -40,9 +38,9 @@ def l(L,P):
  E=0
  q=C()
  T=m(L)
- for i,url in K(L):
+ for i,u in K(L):
   try:
-   r=d(url,headers=F)
+   r=d(u,headers=F)
    r.raise_for_status()
   except v as e:
    V(f"\nError downloading image {i+1}: \033[31m{e}.\033[0m")
@@ -54,8 +52,8 @@ def l(L,P):
   e=C()-q
   E+=m(r.content)
   S=E/e if e>0 else 0
-  w=S/(1024*1024)
-  A=f" (\033[33m{E/(1024*1024):.2f} MB\033[0m – \033[35m{w:.2f} MB/s\033[0m)"
+  w=S/gm
+  A=f" (\033[33m{E/gm:.2f} MB\033[0m – \033[35m{w:.2f} MB/s\033[0m)"
   H(i+1,T,A)
  return c
 def a(c,h):
@@ -67,11 +65,11 @@ def a(c,h):
   u=Image.open(f).convert("RGB")
   t.append(u)
   E+=f.stat().st_size
-  H(i,m(c),f" (\033[33m{E/(1024*1024):.2f} MB\033[0m)")
+  H(i,m(c),f" (\033[33m{E/gm:.2f} MB\033[0m)")
   i+=1
  if t:
   t[0].save(h,save_all=X,append_images=t[1:])
- V("\nPDF created:\033[33m",h,"\033[0m",f" (\033[36m{h.stat().st_size/(1024*1024):.2f} MB\033[0m)")
+ V("\nPDF created:\033[33m",h,"\033[0m",f" (\033[36m{h.stat().st_size/gm:.2f} MB\033[0m)")
 def g(P):
  p="y"
  if p=="y":
