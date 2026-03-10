@@ -51,7 +51,7 @@ def progress(i, total, additionStr=""):
     bar_length = 40
 
     filled = int(bar_length * percent)
-    fPercentage = f" {percent*100:5.1f}% "
+    fPercentage = f" {percent:^6.1%} "
     half_bar = bar_length // 2
 
     if(percent < 0.5):
