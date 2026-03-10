@@ -3,11 +3,13 @@
     - install pyminifier: `pip install pyminifier3`
     - run code: `pyminifier --replacement-length=1 -O --outfile=min.py getTaphuanPDF.py`
     - fix min.py: always error at `Image.N(f).convert("RGB")` replace `Image.N` (N can be something else, just looking for `convert("RGB")`) with `Image.open`
+    - fix some other minor issues (if any), mostly because of poor choice of variable names. If there are too many duplicates in variables names, just run the minifier again.
 """
 #import os
-from pathlib import Path
+import time
 import shutil
 import requests
+from pathlib import Path
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from PIL import Image
@@ -38,14 +40,13 @@ def extract_image_urls(URL):
         if src:
             image_urls.append(urljoin(IMG_BASE_URL, src)) #in case src is a relative URL, we join it with the base URL
 
-    """ for i, url in enumerate(image_urls):
-        print(i+1, url) """
+    # for i, url in enumerate(image_urls): print(i+1, url)
 
     print("Total images found:\033[33m", len(image_urls), "\033[0m")
     return image_urls
 
 """ Improved progress bar with percentage in the middle. """
-def progress(i, total):
+def progress(i, total, additionStr=""):
     percent = i / total
     bar_length = 40
 
@@ -53,25 +54,25 @@ def progress(i, total):
     fPercentage = f" {percent*100:5.1f}% "
     half_bar = bar_length // 2
 
-    # bar = "#" * filled + "-" * (bar_length - filled)
     if(percent < 0.5):
         bar = "#" * filled + "-" * (half_bar - filled) + fPercentage + "-" * half_bar
     else:
         bar = "#" * half_bar + fPercentage + "#" * (filled - half_bar) + "-" * (bar_length - filled)
 
-    print(f"\033[32m\r[{bar}] {i}/{total} \033[0m", end="")
-    #print(f"\r[{bar}] {i}/{total} ", end="")
+    print(f"\033[32m\r[{bar}] \033[36m{i:>3}/{total} \033[0m{additionStr}", end="")
 
 def download_images(image_urls, IMAGE_DIR):
     print("\nDownloading images...")
 
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+
     files = []
+
+    total_bytes = 0
+    start_time = time.perf_counter()
 
     img_len = len(image_urls)
     for i, url in enumerate(image_urls):
-        #print(f"Downloading {i+1}/{len(image_urls)}")
-        progress(i+1, img_len)
-
         try:
             r = requests.get(url, headers=HEADERS)
             r.raise_for_status()
@@ -86,6 +87,16 @@ def download_images(image_urls, IMAGE_DIR):
 
         files.append(filename)
 
+        # speed calculation
+        elapsed = time.perf_counter() - start_time
+        total_bytes += len(r.content)
+        speed = total_bytes / elapsed if elapsed > 0 else 0  # bytes/sec
+        speed_mb = speed / (1024 * 1024)  # convert to MB/s
+        speed_str = f" (\033[33m{total_bytes / (1024 * 1024):.2f} MB\033[0m – \033[35m{speed_mb:.2f} MB/s\033[0m)"
+
+        #print(f"Downloading {i+1}/{len(image_urls)}")
+        progress(i+1, img_len, speed_str)
+        
     return files
 
 
@@ -95,10 +106,12 @@ def create_pdf(files, PDF_FILE):
     images = []
 
     i = 1
+    total_bytes = 0
     for f in files:
         img = Image.open(f).convert("RGB")
         images.append(img)
-        progress(i, len(files))
+        total_bytes += f.stat().st_size
+        progress(i, len(files), f" (\033[33m{total_bytes / (1024 * 1024):.2f} MB\033[0m)")
         i += 1
 
     if images:
@@ -108,7 +121,7 @@ def create_pdf(files, PDF_FILE):
             append_images=images[1:]
         )
 
-    print("\nPDF created:\033[33m", PDF_FILE, "\033[0m")
+    print("\nPDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
 
 
 def delete_images(IMAGE_DIR):
@@ -143,7 +156,8 @@ def main():
     PDF_FILE = os.path.join(BASE_DIR, f"{name}.pdf")
 
     os.makedirs(IMAGE_DIR, exist_ok=True)
- """
+    """
+
     # -------- Get script directory --------
     BASE_DIR = Path(__file__).resolve().parent
 
@@ -154,7 +168,7 @@ def main():
     user_input = input("Enter book URL (press Enter for default): ").strip()
     URL = user_input if user_input else DEFAULT_URL
 
-    print("Using URL:", URL)
+    print("Using URL:\033[33m", URL, "\033[0m")
 
     # -------- Extract book name from URL --------
     path = urlparse(URL).path
@@ -164,17 +178,21 @@ def main():
     IMAGE_DIR = BASE_DIR / name
     PDF_FILE = BASE_DIR / f"{name}.pdf"
 
-    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
-
     # -------- Extract image URLs --------
     urls = extract_image_urls(URL)
 
     if not urls:
-        print("No images found. The page may require JavaScript.")
+        print("\n\033[31mNo images found. The page may require JavaScript.\033[0m")
         return
 
     # -------- Download images, create PDF, and delete images --------
     files = download_images(urls, IMAGE_DIR)
+
+    if not files:
+        print("\n\033[31mNo PDF created.\033[0m")
+        delete_images(IMAGE_DIR)
+        return
+    
     create_pdf(files, PDF_FILE)
     delete_images(IMAGE_DIR)
 
@@ -195,7 +213,8 @@ if __name__ == "__main__":
     """
 
 
-''' Download all pages of the book manually using JS:
+""" 
+Download all pages of the book manually using JS:
 OLM using turn.js (https://github.com/ono77/Turn.js-5/blob/master/lib/turn.js) to render book pages, so we can't get all page images by just fetching the page source, we need to run JS to get all page images.
 Download all pages of the book using JS:
 
@@ -239,4 +258,4 @@ c = Array.prototype.map.call(e,
 		z = t.querySelector("img"); 
 		return {page: pageNo+1, img: z.dataset.src ?? z.src};
 })
-'''
+"""

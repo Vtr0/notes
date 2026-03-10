@@ -1,102 +1,105 @@
 from pathlib import Path
-U=print
-t=len
-J=int
-g=enumerate
-p=open
-O=True
-C=input
-import shutil
-f=shutil.rmtree
-import requests
-S=requests.RequestException
-x=requests.get
+import shutil,requests,time
+V=print;m=len;J=int;X=True;K=enumerate;b=open;M=input;j=shutil.rmtree;v=requests.RequestException;d=requests.get;C=time.perf_counter
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin,urlparse
 from PIL import Image
-l={"User-Agent":"Mozilla/5.0","Referer":"https://taphuan.olm.vn/"}
-G="https://cdn3.olm.vn/"
-def z(X):
- U("\nFetching page...")
+F={"User-Agent":"Mozilla/5.0","Referer":"https://taphuan.olm.vn/"}
+Q="https://cdn3.olm.vn/"
+def z(k):
+ V("\nFetching page...")
  try:
-  w=x(X,headers=l)
-  w.raise_for_status()
- except S as e:
-  U(f"\n\033[31mError fetching page: {e}.\033[0m")
+  Y=d(k,headers=F)
+  Y.raise_for_status()
+ except v as e:
+  V(f"\n\033[31mError fetching page: {e}.\033[0m")
   return[]
- d=BeautifulSoup(w.text,"html.parser")
- R=[]
- for F in d.select("#reader img"):
-  H=F.get("data-src")or F.get("src")
-  if H:
-   R.append(urljoin(G,H))
- U("Total images found:\033[33m",t(R),"\033[0m")
- return R
-def k(i,total):
- W=i/total
- P=40
- N=J(P*W)
- L=f" {W*100:5.1f}% "
- T=P//2
- if(W<0.5):
-  h="#"*N+"-"*(T-N)+L+"-"*T
+ N=BeautifulSoup(Y.text,"html.parser")
+ L=[]
+ for u in N.select("#reader img"):
+  R=u.get("data-src")or u.get("src")
+  if R:
+   L.append(urljoin(Q,R))
+ V("Total images found:\033[33m",m(L),"\033[0m")
+ return L
+def H(i,total,additionStr=""):
+ G=i/total
+ W=40
+ x=J(W*G)
+ B=f" {G*100:5.1f}% "
+ f=W//2
+ if(G<0.5):
+  o="#"*x+"-"*(f-x)+B+"-"*f
  else:
-  h="#"*T+L+"#"*(N-T)+"-"*(P-N)
- U(f"\033[32m\r[{h}] {i}/{total} \033[0m",end="")
-def D(R,A):
- U("\nDownloading images...")
- b=[]
- n=t(R)
- for i,url in g(R):
-  k(i+1,n)
+  o="#"*f+B+"#"*(x-f)+"-"*(W-x)
+ V(f"\033[32m\r[{o}] \033[36m{i:>3}/{total} \033[0m{additionStr}",end="")
+def l(L,P):
+ V("\nDownloading images...")
+ P.mkdir(parents=X,exist_ok=X)
+ c=[]
+ E=0
+ q=C()
+ T=m(L)
+ for i,url in K(L):
   try:
-   r=x(url,headers=l)
+   r=d(url,headers=F)
    r.raise_for_status()
-  except S as e:
-   U(f"\nError downloading image {i+1}: \033[31m{e}.\033[0m")
+  except v as e:
+   V(f"\nError downloading image {i+1}: \033[31m{e}.\033[0m")
    return[]
-  V=A/f"{i:03}.jpg"
-  with p(V,"wb")as f:
+  n=P/f"{i:03}.jpg"
+  with b(n,"wb")as f:
    f.write(r.content)
-  b.append(V)
- return b
-def ix(b,K):
- U("\n\nCreating PDF...\nAdding images to PDF...")
- E=[]
+  c.append(n)
+  e=C()-q
+  E+=m(r.content)
+  S=E/e if e>0 else 0
+  w=S/(1024*1024)
+  A=f" (\033[33m{E/(1024*1024):.2f} MB\033[0m – \033[35m{w:.2f} MB/s\033[0m)"
+  H(i+1,T,A)
+ return c
+def a(c,h):
+ V("\n\nCreating PDF...\nAdding images to PDF...")
+ t=[]
  i=1
- for f in b:
-  F=Image.open(f).convert("RGB")
-  E.append(F)
-  k(i,t(b))
+ E=0
+ for f in c:
+  u=Image.open(f).convert("RGB")
+  t.append(u)
+  E+=f.stat().st_size
+  H(i,m(c),f" (\033[33m{E/(1024*1024):.2f} MB\033[0m)")
   i+=1
- if E:
-  E[0].save(K,save_all=O,append_images=E[1:])
- U("\nPDF created:\033[33m",K,"\033[0m")
-def r(A):
- s="y"
- if s=="y":
-  f(A)
-  U("\n\033[31mTemplate Image folder deleted.\033[0m")
+ if t:
+  t[0].save(h,save_all=X,append_images=t[1:])
+ V("\nPDF created:\033[33m",h,"\033[0m",f" (\033[36m{h.stat().st_size/(1024*1024):.2f} MB\033[0m)")
+def g(P):
+ p="y"
+ if p=="y":
+  j(P)
+  V("\n\033[31mTemplate Image folder deleted.\033[0m")
  else:
-  U("\n\033[32mTemplate Images kept.\033[0m")
-def B():
- m=Path(__file__).resolve().parent
- a="https://taphuan.olm.vn/tap-huan/doc-sach/shs-cong-nghe-3.4538694745#page=0"
- e=C("Enter book URL (press Enter for default): ").strip()
- X=e if e else a
- U("Using URL:",X)
- Q=urlparse(X).path
- c=Path(Q).name
- M=c.split(".")[0]
- A=m/M
- K=m/f"{M}.pdf"
- A.mkdir(parents=O,exist_ok=O)
- y=z(X)
- if not y:
-  U("No images found. The page may require JavaScript.")
+  V("\n\033[32mTemplate Images kept.\033[0m")
+def O():
+ U=Path(__file__).resolve().parent
+ I="https://taphuan.olm.vn/tap-huan/doc-sach/shs-cong-nghe-3.4538694745#page=0"
+ i=M("Enter book URL (press Enter for default): ").strip()
+ k=i if i else I
+ V("Using URL:\033[33m",k,"\033[0m")
+ r=urlparse(k).path
+ s=Path(r).name
+ y=s.split(".")[0]
+ P=U/y
+ h=U/f"{y}.pdf"
+ D=z(k)
+ if not D:
+  V("\n\033[31mNo images found. The page may require JavaScript.\033[0m")
   return
- b=D(y,A)
- ix(b,K)
- r(A)
+ c=l(D,P)
+ if not c:
+  V("\n\033[31mNo PDF created.\033[0m")
+  g(P)
+  return
+ a(c,h)
+ g(P)
 if __name__=="__main__":
- B()
+ O()
