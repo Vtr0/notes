@@ -121,7 +121,7 @@ def create_pdf(files, PDF_FILE):
             append_images=images[1:]
         )
 
-    print("\nPDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
+    print("\n\n📁 PDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
 
 
 def delete_images(IMAGE_DIR):
