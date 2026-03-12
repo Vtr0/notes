@@ -35,7 +35,7 @@ def spinner(message="Working"):
         for c in itertools.cycle("⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"):
             if stop.is_set():
                 break
-            print(f"\r{message} {c} ", end="", flush=True)
+            print(f"\r{message} {c}", end="", flush=True) 
             time.sleep(0.1)
             
     thread = threading.Thread(target=spin)
@@ -46,7 +46,7 @@ def spinner(message="Working"):
     finally:
         stop.set()
         thread.join()
-        print(f"\r{message} Done\n", end="", flush=True)
+        print(f"\r", end="", flush=True) #{message} Done\n
 
 def extract_image_urls(URL):
     print("\nExtracting image URLs from page...")
@@ -90,7 +90,7 @@ def progress(i, total, additionStr=""):
     print(f"\033[32m\r|{bar}| \033[36m{i:>3}/{total} \033[0m{additionStr} ", end="")
 
 def download_images(image_urls, IMAGE_DIR):
-    print("\nDownloading images...")
+    print("\n📥 Downloading images...")
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -129,7 +129,7 @@ def download_images(image_urls, IMAGE_DIR):
 
 
 def create_pdf(files, PDF_FILE):
-    print("\n\nCreating PDF...\nAdding images to PDF...")
+    print("\n\nCreating PDF...\n📦 Adding images to PDF...")
 
     images = []
 
@@ -151,7 +151,7 @@ def create_pdf(files, PDF_FILE):
                 append_images=images[1:]
             )
 
-    print("\n📁 PDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
+    print("📁 PDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
 
 
 def delete_images(IMAGE_DIR):
@@ -164,6 +164,8 @@ def delete_images(IMAGE_DIR):
         print("\n\033[32mTemplate Images kept.\033[0m")
 
 def main():
+    start_time = time.perf_counter()
+
     # -------- Get script directory --------
     BASE_DIR = Path(__file__).resolve().parent
 
@@ -201,6 +203,9 @@ def main():
     
     create_pdf(files, PDF_FILE)
     delete_images(IMAGE_DIR)
+
+    m, s = divmod(int(time.perf_counter() - start_time), 60)
+    print(f"\n⌛ Total downloading time: \033[38;5;48m{m:02d}:{s:02d}\033[0m")
 
 if __name__ == "__main__":
     main()
