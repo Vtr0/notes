@@ -21,17 +21,45 @@ HEADERS = {"User-Agent": "Mozilla/5.0",
 
 IMG_BASE_URL = "https://cdn3.olm.vn/" # base URL for images, in case the src is a relative URL, we need to join it with this base URL
 
-def extract_image_urls(URL):
-    print("\nFetching page...")
+from contextlib import contextmanager
+@contextmanager
+def spinner(message="Working"):
+    import itertools
+    import threading
+    import time
+
+    stop = threading.Event()
+
+    def spin():
+        # for c in itertools.cycle("|/-\\"):
+        for c in itertools.cycle("⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"):
+            if stop.is_set():
+                break
+            print(f"\r{message} {c} ", end="", flush=True)
+            time.sleep(0.1)
+            
+    thread = threading.Thread(target=spin)
+    thread.start()
 
     try:
-        res = requests.get(URL, headers=HEADERS)
-        res.raise_for_status()
-    except requests.RequestException as e:
-        print(f"\n\033[31mError fetching page: {e}.\033[0m")
-        return []
+        yield
+    finally:
+        stop.set()
+        thread.join()
+        print(f"\r{message} Done\n", end="", flush=True)
 
-    soup = BeautifulSoup(res.text, "html.parser")
+def extract_image_urls(URL):
+    print("\nExtracting image URLs from page...")
+
+    with spinner("Fetching page"):
+        try:
+            res = requests.get(URL, headers=HEADERS)
+            res.raise_for_status()
+        except requests.RequestException as e:
+            print(f"\n\033[31mError fetching page: {e}.\033[0m")
+            return []
+
+        soup = BeautifulSoup(res.text, "html.parser")
 
     image_urls = []    
 
@@ -59,7 +87,7 @@ def progress(i, total, additionStr=""):
     else:
         bar = "█" * half_bar + fPercentage + "█" * (filled - half_bar) + "░" * (bar_length - filled)
 
-    print(f"\033[32m\r|{bar}| \033[36m{i:>3}/{total} \033[0m{additionStr}", end="")
+    print(f"\033[32m\r|{bar}| \033[36m{i:>3}/{total} \033[0m{additionStr} ", end="")
 
 def download_images(image_urls, IMAGE_DIR):
     print("\nDownloading images...")
@@ -92,7 +120,7 @@ def download_images(image_urls, IMAGE_DIR):
         total_bytes += len(r.content)
         speed = total_bytes / elapsed if elapsed > 0 else 0  # bytes/sec
         speed_mb = speed / (1024 * 1024)  # convert to MB/s
-        speed_str = f" (\033[33m{total_bytes / (1024 * 1024):.2f} MB\033[0m – \033[35m{speed_mb:.2f} MB/s\033[0m)"
+        speed_str = f" (\033[33m{total_bytes / (1024 * 1024):.2f} MB\033[0m – 🌐 \033[38;5;46m{speed_mb:.2f} MB/s\033[0m)"
 
         #print(f"Downloading {i+1}/{len(image_urls)}")
         progress(i+1, img_len, speed_str)
@@ -114,14 +142,16 @@ def create_pdf(files, PDF_FILE):
         progress(i, len(files), f" (\033[33m{total_bytes / (1024 * 1024):.2f} MB\033[0m)")
         i += 1
 
-    if images:
-        images[0].save(
-            PDF_FILE,
-            save_all=True,
-            append_images=images[1:]
-        )
+    print("\n")
+    with spinner("Packaging PDF"):
+        if images:
+            images[0].save(
+                PDF_FILE,
+                save_all=True,
+                append_images=images[1:]
+            )
 
-    print("\n\n📁 PDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
+    print("\n📁 PDF created:\033[33m", PDF_FILE, "\033[0m", f" (\033[36m{PDF_FILE.stat().st_size / (1024 * 1024):.2f} MB\033[0m)")
 
 
 def delete_images(IMAGE_DIR):
@@ -134,30 +164,6 @@ def delete_images(IMAGE_DIR):
         print("\n\033[32mTemplate Images kept.\033[0m")
 
 def main():
-    """ 
-    # -------- Get script directory --------
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-    # -------- Default URL --------
-    DEFAULT_URL = "https://taphuan.olm.vn/tap-huan/doc-sach/shs-cong-nghe-3.4538694745#page=0"
-
-    # -------- Ask user for URL --------
-    user_input = input("Enter book URL (press Enter for default): ").strip()
-    URL = user_input if user_input else DEFAULT_URL
-
-    print("Using URL:", URL)
-
-    # -------- Extract book name from URL --------
-    path = urlparse(URL).path
-    slug = os.path.basename(path)
-    name = slug.split(".")[0]
-
-    IMAGE_DIR = os.path.join(BASE_DIR, name)
-    PDF_FILE = os.path.join(BASE_DIR, f"{name}.pdf")
-
-    os.makedirs(IMAGE_DIR, exist_ok=True)
-    """
-
     # -------- Get script directory --------
     BASE_DIR = Path(__file__).resolve().parent
 
