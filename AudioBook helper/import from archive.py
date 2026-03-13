@@ -85,9 +85,17 @@ def extract_title(html):
     else:
         raise ValueError("Title not found")
 
+def sort_by_title(items):
+    import re
+    m_sorted = sorted(
+        items,
+        key=lambda x: int(re.search(r'\d+', x["tit"]).group())
+    )
+    return m_sorted
+
 # Example usage
 if __name__ == "__main__":
-    url = "https://archive.org/details/quang-am-chi-ngoai-full/"
+    url = "https://archive.org/details/dao-ton-full/"
     download_url = url.replace("/details/", "/download/") + "/"
     # 1. Fetch HTML content
     response = requests.get(url, timeout=10)
@@ -103,6 +111,9 @@ if __name__ == "__main__":
 
     image_url = extract_image_url(html).replace("?cnt=0", "")
     print("Image URL:", image_url)
+
+    choice = input("\nSort chapters by title? (y/n): ").strip().lower()
+    if choice == "y": formatted_items = sort_by_title(formatted_items)
 
     artist = "Linkin Park"
     full_data = {
