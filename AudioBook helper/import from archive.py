@@ -120,9 +120,9 @@ if __name__ == "__main__":
         "bookId": "",
         "title": extract_title(html),
         "author": artist,
-	   "type": "Hard Rock",
-	   "mc": artist,
-	   "cover": image_url,
+	    "type": "Hard Rock",
+	    "mc": artist,
+	    "cover": image_url,
         "ssrc": [url],
         "grp": [f"{re.sub(r'[^a-zA-Z]', '', artist).upper()}1$5Z", "HARDROCK.MMC", "HARDROCK.MMC"],
           "wc": {
