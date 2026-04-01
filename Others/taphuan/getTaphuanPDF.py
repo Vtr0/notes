@@ -19,7 +19,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0",
             "Referer": "https://taphuan.olm.vn/" # some images may require Referer header to be set to the main page URL, otherwise we may get 403 Forbidden error when trying to download them
             }
 
-IMG_BASE_URL = "https://cdn3.olm.vn/" # base URL for images, in case the src is a relative URL, we need to join it with this base URL
+IMG_BASE_URL = "https://taphuan.olm.vn/" #"https://cdn3.olm.vn/" # base URL for images, in case the src is a relative URL, we need to join it with this base URL
 
 from contextlib import contextmanager
 @contextmanager
