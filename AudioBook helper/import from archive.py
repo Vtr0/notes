@@ -95,7 +95,7 @@ def sort_by_title(items):
 
 # Example usage
 if __name__ == "__main__":
-    url = "https://archive.org/details/dao-ton-full/"
+    url = "https://archive.org/details/tam-the-29"
     download_url = url.replace("/details/", "/download/") + "/"
     # 1. Fetch HTML content
     response = requests.get(url, timeout=10)
