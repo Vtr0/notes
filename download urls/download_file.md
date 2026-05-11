@@ -18,6 +18,10 @@ Single window prompt to download a file. Note that curl can download a file even
 ```batch
 curl -L -H "User-Agent: Mozilla/5.0" -O "https://archive.org/download/dai-chua-te_202202/[1-70].mp3"
 ```
+OR
+```batch
+curl -L -H "User-Agent: Mozilla/5.0" -O "https://archive.org/download/dai-chua-te_202202/dct-{2,5,8}.mp3"
+```
 * Specify output directory, specify output filename from the value in the range
 ```batch
 curl -L -H "User-Agent: Mozilla/5.0" --create-dirs --output-dir "temp-dir" -o "#1.mp3" "https://archive.org/download/dai-chua-te_202202/[1-70].mp3"
