@@ -1,15 +1,6 @@
-""" 
-Use one of the following commands to install dependencies if you don't have them installed yet:
-    python -m pip install requests beautifulsoup4 Pillow
-    pip install requests beautifulsoup4 Pillow
-    python3 -m pip install requests beautifulsoup4 Pillow
-
-Update pip if you have an old version of pip:
-    python -m pip install --upgrade pip
-"""
 import time,shutil,requests,itertools,threading,time;from pathlib import Path;from bs4 import BeautifulSoup;from urllib.parse import urljoin,urlparse;from PIL import Image;from contextlib import contextmanager
 W=print;n=True;vL=len;vP=int;vc=enumerate;vR=open;vl=input;E=time.perf_counter;A=time.sleep;N=shutil.rmtree;g=requests.RequestException;q=requests.get;gm=1024*1024
-v={"User-Agent":"Mozilla/5.0","Referer":"https://taphuan.olm.vn/"};L="https://taphuan.nxbgd.vn/"
+v={"User-Agent":"Mozilla/5.0","Referer":"https://nxbgd.olm.vn/"};L="https://nxbgd.olm.vn/"
 @contextmanager
 def s(m="Working"):
  A=time.sleep;P=threading.Event()
@@ -68,7 +59,7 @@ def M(D):
 def O():
  q=E()
  i=Path(__file__).resolve().parent
- h="https://taphuan.nxbgd.vn/tap-huan/doc-sach/sgk-tin-hoc-4.4698914396#page=1"
+ h="https://nxbgd.olm.vn/thu-vien-so/doc-sach/shs-tin-hoc-3.4484767641"
  J=vl("Enter book URL (press Enter for default): ").strip()
  u=J if J else h
  W("Using URL:\033[33m",u,"\033[0m")

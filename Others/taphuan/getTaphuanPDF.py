@@ -5,6 +5,15 @@
     - fix min.py: always error at `Image.N(f).convert("RGB")` replace `Image.N` (N can be something else, just looking for `convert("RGB")`) with `Image.open`
     - fix some other minor issues (if any), mostly because of poor choice of variable names. If there are too many duplicates in variables names, just run the minifier again.
 """
+""" 
+Use one of the following commands to install dependencies if you don't have them installed yet:
+    python -m pip install requests beautifulsoup4 Pillow
+    pip install requests beautifulsoup4 Pillow
+    python3 -m pip install requests beautifulsoup4 Pillow
+
+Update pip if you have an old version of pip:
+    python -m pip install --upgrade pip
+"""
 #import os
 import time
 import shutil
